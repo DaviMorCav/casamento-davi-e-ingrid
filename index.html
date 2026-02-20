@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Davi & Ingrid - Nosso Casamento</title>
     
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -50,18 +53,22 @@
         }
     </script>
 
+    <!-- Arquivo de Estilos Externo -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="font-sans antialiased selection:bg-rose selection:text-white">
 
+    <!-- Navbar -->
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 px-6 md:px-12 bg-transparent">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <a href="#" class="font-serif text-2xl tracking-widest text-white transition-colors duration-300" id="nav-logo">D & I</a>
             
+            <!-- Mobile menu button -->
             <button class="md:hidden text-white focus:outline-none" id="mobile-menu-btn">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
 
+            <!-- Desktop Menu -->
             <ul class="hidden md:flex space-x-8 text-sm uppercase tracking-widest text-white font-medium" id="nav-links">
                 <li><a href="#nossa-historia" class="inline-block hover:text-orange hover:scale-110 transition-all duration-300">História</a></li>
                 <li><a href="#programacao" class="inline-block hover:text-rose hover:scale-110 transition-all duration-300">Programação</a></li>
@@ -70,6 +77,7 @@
             </ul>
         </div>
         
+        <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-offwhite/95 backdrop-blur-sm shadow-lg border-t border-rose py-4 px-6 transition-all duration-300">
             <ul class="flex flex-col space-y-4 text-sm uppercase tracking-widest text-sage-dark text-center">
                 <li><a href="#nossa-historia" class="block hover:text-orange hover:scale-105 transition-all duration-300" onclick="toggleMobileMenu()">História</a></li>
@@ -80,6 +88,7 @@
         </div>
     </nav>
 
+    <!-- Hero Section -->
     <header class="hero-bg h-screen relative flex items-center justify-center text-center">
         <div class="absolute inset-0 bg-black/20"></div>
         <div class="relative z-10 text-white px-4 mt-16 fade-in-section is-visible">
@@ -92,12 +101,15 @@
             </a>
         </div>
         
+        <!-- Scroll indicator -->
         <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white/70">
             <i class="fas fa-chevron-down text-2xl"></i>
         </div>
     </header>
 
+    <!-- Countdown Section -->
     <section class="bg-sage-darker text-white py-6 px-4 shadow-inner relative overflow-hidden">
+        <!-- Decorative background elements -->
         <svg class="absolute -left-6 -top-6 w-32 h-32 text-sage-dark opacity-30 transform -rotate-12" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12,2C12,2 10.5,5 12,8C13.5,5 12,2 12,2M8,4.5C8,4.5 9,7.5 11.5,9.5C10,7 8,4.5 8,4.5M4.5,8C4.5,8 7.5,9 9.5,11.5C7,10 4.5,8 4.5,8M2,12C2,12 5,13.5 8,12C5,10.5 2,12 2,12M4.5,16C4.5,16 7.5,15 9.5,12.5C7,14 4.5,16 4.5,16M8,19.5C8,19.5 9,16.5 11.5,14.5C10,17 8,19.5 8,19.5M12,22C12,22 13.5,19 12,16C10.5,19 12,22 12,22M16,19.5C16,19.5 15,16.5 12.5,14.5C14,17 16,19.5 16,19.5M19.5,16C19.5,16 16.5,15 14.5,12.5C17,14 19.5,16 19.5,16M22,12C22,12 19,10.5 16,12C19,13.5 22,12 22,12M19.5,8C19.5,8 16.5,9 14.5,11.5C17,10 19.5,8 19.5,8M16,4.5C16,4.5 15,7.5 12.5,9.5C14,7 16,4.5 16,4.5Z" />
         </svg>
@@ -113,17 +125,20 @@
             </div>
             
             <div class="flex justify-center gap-3 md:gap-6" id="countdown">
-                </div>
+                <!-- Injected via JS -->
+            </div>
         </div>
     </section>
 
+    <!-- Nossa História Section -->
     <section id="nossa-historia" class="py-24 px-6 md:px-12 bg-offwhite overflow-hidden">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 lg:gap-24">
             
             <div class="w-full md:w-1/2 fade-in-section">
                 <div class="relative">
                     <div class="absolute inset-0 border-2 border-rose -translate-x-4 translate-y-4 rounded-t-[100px] rounded-b-lg"></div>
-                    <img src="casal.jpg" alt="Casal no Jardim" class="relative z-10 rounded-t-[100px] rounded-b-lg object-cover shadow-xl aspect-[3/4] w-full max-w-md mx-auto">
+                    <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Casal no Jardim" class="relative z-10 rounded-t-[100px] rounded-b-lg object-cover shadow-xl aspect-[3/4] w-full max-w-md mx-auto">
+                    <!-- Decorative element -->
                     <i class="fas fa-leaf absolute -bottom-6 -right-6 text-5xl text-orange opacity-40 z-20 transform rotate-12"></i>
                 </div>
             </div>
@@ -133,14 +148,12 @@
                 <h3 class="font-serif italic text-2xl text-rose-dark mb-8">(E um ao outro)</h3>
                 
                 <div class="space-y-6 text-gray-600 leading-relaxed font-light">
+                    <!-- TEXTO REIMAGINADO AQUI -->
                     <p>
-                        A nossa história sempre teve cheiro de terra molhada e cores de flores ao entardecer. Desde o nosso primeiro encontro, soubemos que estávamos plantando algo muito especial.
+                        Nossa história começou como uma pequena semente e, com carinho diário, floresceu em algo muito maior. Cultivamos sonhos, fortalecemos nossas raízes e agora estamos prontos para a colheita mais bonita: o nosso "sim".
                     </p>
                     <p>
-                        Crescemos, amadurecemos nossas raízes e, assim como um jardim que precisa de cuidado diário, nosso amor floresceu de maneira única. Compartilhamos sonhos, cafés nas manhãs de domingo e uma vontade imensa de construir uma vida linda juntos.
-                    </p>
-                    <p>
-                        Agora, estamos prestes a colher o fruto mais bonito dessa jornada: o nosso casamento. E não faria sentido celebrar este momento em nenhum outro lugar que não fosse cercado pela natureza, com as pessoas que mais amamos.
+                        Celebrar o nosso casamento cercado pela natureza, pelas cores das flores e pelas pessoas que mais amamos é o nosso maior sonho se tornando realidade.
                     </p>
                 </div>
                 
@@ -151,16 +164,19 @@
         </div>
     </section>
 
+    <!-- Programação Section -->
     <section id="programacao" class="py-24 px-6 md:px-12 bg-white relative">
         <div class="max-w-4xl mx-auto fade-in-section">
             <div class="text-center mb-16">
                 <h2 class="font-serif text-4xl md:text-5xl text-sage-dark mb-4">Programação do Dia</h2>
+                <!-- Gradient Divider -->
                 <div class="w-24 h-1 bg-gradient-to-r from-orange to-rose-dark mx-auto mb-6"></div>
                 <p class="text-gray-500 italic">O que esperar do nosso momento especial</p>
             </div>
 
             <div class="relative timeline-container py-8">
                 
+                <!-- Event 1 -->
                 <div class="relative flex md:justify-between items-center w-full mb-12 flex-col md:flex-row pl-12 md:pl-0">
                     <div class="md:w-5/12 text-left md:text-right pr-0 md:pr-8 w-full">
                         <h4 class="font-serif text-xl font-bold text-sage-dark">17:00</h4>
@@ -172,6 +188,7 @@
                     </div>
                 </div>
 
+                <!-- Event 2 -->
                 <div class="relative flex md:justify-between items-center w-full mb-12 flex-col md:flex-row-reverse pl-12 md:pl-0">
                     <div class="md:w-5/12 text-left pl-0 md:pl-8 w-full">
                         <h4 class="font-serif text-xl font-bold text-sage-dark">18:00</h4>
@@ -183,6 +200,7 @@
                     </div>
                 </div>
 
+                <!-- Event 3 -->
                 <div class="relative flex md:justify-between items-center w-full mb-12 flex-col md:flex-row pl-12 md:pl-0">
                     <div class="md:w-5/12 text-left md:text-right pr-0 md:pr-8 w-full">
                         <h4 class="font-serif text-xl font-bold text-sage-dark">19:00</h4>
@@ -194,6 +212,7 @@
                     </div>
                 </div>
 
+                <!-- Event 4 -->
                 <div class="relative flex md:justify-between items-center w-full mb-12 flex-col md:flex-row-reverse pl-12 md:pl-0">
                     <div class="md:w-5/12 text-left pl-0 md:pl-8 w-full">
                         <h4 class="font-serif text-xl font-bold text-sage-dark">20:00</h4>
@@ -205,6 +224,7 @@
                     </div>
                 </div>
 
+                <!-- Event 5 -->
                 <div class="relative flex md:justify-between items-center w-full flex-col md:flex-row pl-12 md:pl-0">
                     <div class="md:w-5/12 text-left md:text-right pr-0 md:pr-8 w-full">
                         <h4 class="font-serif text-xl font-bold text-sage-dark">21:00</h4>
@@ -220,6 +240,7 @@
         </div>
     </section>
 
+    <!-- Details Section (Cream/Peach background applied here) -->
     <section id="detalhes" class="py-24 px-6 md:px-12 bg-cream relative">
         <div class="floral-divider absolute top-0 left-0 w-full transform -translate-y-1/2"></div>
         
@@ -227,6 +248,7 @@
             <h2 class="font-serif text-4xl md:text-5xl text-sage-dark mb-16">Detalhes da Recepção</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- Venue -->
                 <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-rose-dark hover:-translate-y-2 transition-transform duration-300">
                     <div class="w-16 h-16 bg-offwhite rounded-full flex items-center justify-center mx-auto mb-6 text-rose-dark text-2xl">
                         <i class="fas fa-map-marker-alt"></i>
@@ -237,6 +259,7 @@
                     </p>
                 </div>
 
+                <!-- Dress Code -->
                 <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-orange hover:-translate-y-2 transition-transform duration-300">
                     <div class="w-16 h-16 bg-offwhite rounded-full flex items-center justify-center mx-auto mb-6 text-orange text-2xl">
                         <i class="fas fa-tshirt"></i>
@@ -247,6 +270,7 @@
                     </p>
                 </div>
 
+                <!-- Parking -->
                 <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-sage hover:-translate-y-2 transition-transform duration-300">
                     <div class="w-16 h-16 bg-offwhite rounded-full flex items-center justify-center mx-auto mb-6 text-sage text-2xl">
                         <i class="fas fa-car"></i>
@@ -260,8 +284,10 @@
         </div>
     </section>
 
+    <!-- RSVP Section -->
     <section id="rsvp" class="py-24 px-6 md:px-12 bg-offwhite relative">
         <div class="max-w-3xl mx-auto bg-white p-8 md:p-16 rounded-2xl shadow-xl border-t-8 border-rose relative overflow-hidden fade-in-section">
+            <!-- Decorative Corners -->
             <i class="fas fa-seedling absolute top-4 left-4 text-3xl text-sage/20"></i>
             <i class="fas fa-seedling absolute bottom-4 right-4 text-3xl text-sage/20 transform rotate-180"></i>
 
@@ -310,6 +336,7 @@
                 </button>
             </form>
 
+            <!-- Success Message (Hidden by default) -->
             <div id="rsvp-success" class="hidden text-center py-8">
                 <div class="w-16 h-16 bg-sage-light/30 rounded-full flex items-center justify-center mx-auto mb-4 text-sage-dark text-3xl">
                     <i class="fas fa-heart"></i>
@@ -321,6 +348,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="bg-sage-darker text-offwhite py-6 px-6 text-center">
         <div class="max-w-4xl mx-auto">
             <h2 class="font-serif text-2xl md:text-3xl mb-2">Davi & Ingrid</h2>
@@ -328,6 +356,7 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script>
         // --- Navbar Scroll Effect ---
         const navbar = document.getElementById('navbar');
