@@ -17,11 +17,13 @@
             theme: {
                 extend: {
                     colors: {
+                        offwhite: '#FCFAF8',
                         cream: '#ffdfb9',
                         sage: {
                             light: '#A3B18A',
                             DEFAULT: '#7A8B76',
-                            dark: '#52604F'
+                            dark: '#52604F',
+                            darker: '#3A4436'
                         },
                         rose: {
                             light: '#f0a878',
@@ -30,6 +32,12 @@
                         },
                         orange: {
                             DEFAULT: '#ff751f'
+                        },
+                        yellow: {
+                            DEFAULT: '#eab308'
+                        },
+                        grape: {
+                            DEFAULT: '#9333ea'
                         },
                         textDark: '#333333'
                     },
@@ -44,30 +52,30 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="font-sans antialiased selection:bg-rose-light selection:text-sage-dark">
+<body class="font-sans antialiased selection:bg-rose selection:text-white">
 
     <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 px-6 md:px-12 bg-transparent">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <a href="#" class="font-serif text-2xl tracking-widest text-white transition-colors duration-300" id="nav-logo">D & A</a>
+            <a href="#" class="font-serif text-2xl tracking-widest text-white transition-colors duration-300" id="nav-logo">D & I</a>
             
             <button class="md:hidden text-white focus:outline-none" id="mobile-menu-btn">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
 
             <ul class="hidden md:flex space-x-8 text-sm uppercase tracking-widest text-white font-medium" id="nav-links">
-                <li><a href="#nossa-historia" class="hover:text-rose transition-colors">História</a></li>
-                <li><a href="#programacao" class="hover:text-rose transition-colors">Programação</a></li>
-                <li><a href="#detalhes" class="hover:text-rose transition-colors">Detalhes</a></li>
-                <li><a href="#rsvp" class="hover:text-rose transition-colors">RSVP</a></li>
+                <li><a href="#nossa-historia" class="inline-block hover:text-orange hover:scale-110 transition-all duration-300">História</a></li>
+                <li><a href="#programacao" class="inline-block hover:text-rose hover:scale-110 transition-all duration-300">Programação</a></li>
+                <li><a href="#detalhes" class="inline-block hover:text-yellow hover:scale-110 transition-all duration-300">Detalhes</a></li>
+                <li><a href="#rsvp" class="inline-block hover:text-grape hover:scale-110 transition-all duration-300">RSVP</a></li>
             </ul>
         </div>
         
-        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-cream/95 backdrop-blur-sm shadow-lg border-t border-rose-light py-4 px-6 transition-all duration-300">
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-offwhite/95 backdrop-blur-sm shadow-lg border-t border-rose py-4 px-6 transition-all duration-300">
             <ul class="flex flex-col space-y-4 text-sm uppercase tracking-widest text-sage-dark text-center">
-                <li><a href="#nossa-historia" class="block hover:text-rose transition-colors" onclick="toggleMobileMenu()">História</a></li>
-                <li><a href="#programacao" class="block hover:text-rose transition-colors" onclick="toggleMobileMenu()">Programação</a></li>
-                <li><a href="#detalhes" class="block hover:text-rose transition-colors" onclick="toggleMobileMenu()">Detalhes</a></li>
-                <li><a href="#rsvp" class="block hover:text-rose transition-colors" onclick="toggleMobileMenu()">RSVP</a></li>
+                <li><a href="#nossa-historia" class="block hover:text-orange hover:scale-105 transition-all duration-300" onclick="toggleMobileMenu()">História</a></li>
+                <li><a href="#programacao" class="block hover:text-rose hover:scale-105 transition-all duration-300" onclick="toggleMobileMenu()">Programação</a></li>
+                <li><a href="#detalhes" class="block hover:text-yellow hover:scale-105 transition-all duration-300" onclick="toggleMobileMenu()">Detalhes</a></li>
+                <li><a href="#rsvp" class="block hover:text-grape hover:scale-105 transition-all duration-300" onclick="toggleMobileMenu()">RSVP</a></li>
             </ul>
         </div>
     </nav>
@@ -75,11 +83,11 @@
     <header class="hero-bg h-screen relative flex items-center justify-center text-center">
         <div class="absolute inset-0 bg-black/20"></div>
         <div class="relative z-10 text-white px-4 mt-16 fade-in-section is-visible">
-            <p class="font-sans text-sm md:text-base uppercase tracking-[0.3em] mb-4 text-rose-light">26 de Julho de 2026 • Rosas Buffet</p>
+            <p class="font-sans text-sm md:text-base uppercase tracking-[0.3em] mb-4 text-cream">26 de Julho de 2026 • Rosas Buffet</p>
             <h1 class="font-serif text-6xl md:text-8xl lg:text-9xl mb-6 drop-shadow-lg">Davi & Ingrid</h1>
-            <p class="font-serif italic text-xl md:text-2xl mt-4 text-cream/90">Vamos nos casar!</p>
+            <p class="font-serif italic text-xl md:text-2xl mt-4 text-cream">Vamos nos casar!</p>
             
-            <a href="#rsvp" class="inline-block mt-12 px-8 py-3 bg-white/20 hover:bg-white/30 backdrop-blur-sm border border-white/50 rounded-full transition-all duration-300 uppercase tracking-widest text-xs font-bold shadow-lg">
+            <a href="#rsvp" class="inline-block mt-12 px-8 py-3 bg-white/20 hover:bg-white hover:text-orange hover:scale-105 backdrop-blur-sm border border-white/50 rounded-full transition-all duration-300 uppercase tracking-widest text-xs font-bold shadow-lg">
                 Confirme sua presença
             </a>
         </div>
@@ -89,28 +97,40 @@
         </div>
     </header>
 
-    <section class="bg-sage text-white py-12 px-4 shadow-inner">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="font-serif text-2xl italic mb-8 opacity-90">Contagem regressiva para o grande dia</h2>
-            <div class="flex justify-center gap-4 md:gap-12" id="countdown">
+    <section class="bg-sage-darker text-white py-6 px-4 shadow-inner relative overflow-hidden">
+        <svg class="absolute -left-6 -top-6 w-32 h-32 text-sage-dark opacity-30 transform -rotate-12" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12,2C12,2 10.5,5 12,8C13.5,5 12,2 12,2M8,4.5C8,4.5 9,7.5 11.5,9.5C10,7 8,4.5 8,4.5M4.5,8C4.5,8 7.5,9 9.5,11.5C7,10 4.5,8 4.5,8M2,12C2,12 5,13.5 8,12C5,10.5 2,12 2,12M4.5,16C4.5,16 7.5,15 9.5,12.5C7,14 4.5,16 4.5,16M8,19.5C8,19.5 9,16.5 11.5,14.5C10,17 8,19.5 8,19.5M12,22C12,22 13.5,19 12,16C10.5,19 12,22 12,22M16,19.5C16,19.5 15,16.5 12.5,14.5C14,17 16,19.5 16,19.5M19.5,16C19.5,16 16.5,15 14.5,12.5C17,14 19.5,16 19.5,16M22,12C22,12 19,10.5 16,12C19,13.5 22,12 22,12M19.5,8C19.5,8 16.5,9 14.5,11.5C17,10 19.5,8 19.5,8M16,4.5C16,4.5 15,7.5 12.5,9.5C14,7 16,4.5 16,4.5Z" />
+        </svg>
+        <svg class="absolute -right-6 -bottom-6 w-32 h-32 text-sage-dark opacity-30 transform rotate-12" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12,2C12,2 10.5,5 12,8C13.5,5 12,2 12,2M8,4.5C8,4.5 9,7.5 11.5,9.5C10,7 8,4.5 8,4.5M4.5,8C4.5,8 7.5,9 9.5,11.5C7,10 4.5,8 4.5,8M2,12C2,12 5,13.5 8,12C5,10.5 2,12 2,12M4.5,16C4.5,16 7.5,15 9.5,12.5C7,14 4.5,16 4.5,16M8,19.5C8,19.5 9,16.5 11.5,14.5C10,17 8,19.5 8,19.5M12,22C12,22 13.5,19 12,16C10.5,19 12,22 12,22M16,19.5C16,19.5 15,16.5 12.5,14.5C14,17 16,19.5 16,19.5M19.5,16C19.5,16 16.5,15 14.5,12.5C17,14 19.5,16 19.5,16M22,12C22,12 19,10.5 16,12C19,13.5 22,12 22,12M19.5,8C19.5,8 16.5,9 14.5,11.5C17,10 19.5,8 19.5,8M16,4.5C16,4.5 15,7.5 12.5,9.5C14,7 16,4.5 16,4.5Z" />
+        </svg>
+        
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <div class="flex items-center justify-center gap-4 mb-6">
+                <div class="h-[1px] w-12 md:w-24 bg-gradient-to-r from-transparent to-cream"></div>
+                <h2 class="font-serif text-xl md:text-2xl italic opacity-90 m-0 text-cream">Contagem regressiva</h2>
+                <div class="h-[1px] w-12 md:w-24 bg-gradient-to-l from-transparent to-cream"></div>
+            </div>
+            
+            <div class="flex justify-center gap-3 md:gap-6" id="countdown">
                 </div>
         </div>
     </section>
 
-    <section id="nossa-historia" class="py-24 px-6 md:px-12 bg-cream overflow-hidden">
+    <section id="nossa-historia" class="py-24 px-6 md:px-12 bg-offwhite overflow-hidden">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 lg:gap-24">
             
             <div class="w-full md:w-1/2 fade-in-section">
                 <div class="relative">
-                    <div class="absolute inset-0 border-2 border-sage -translate-x-4 translate-y-4 rounded-t-[100px] rounded-b-lg"></div>
+                    <div class="absolute inset-0 border-2 border-rose -translate-x-4 translate-y-4 rounded-t-[100px] rounded-b-lg"></div>
                     <img src="casal.jpg" alt="Casal no Jardim" class="relative z-10 rounded-t-[100px] rounded-b-lg object-cover shadow-xl aspect-[3/4] w-full max-w-md mx-auto">
-                    <i class="fas fa-leaf absolute -bottom-6 -right-6 text-5xl text-rose opacity-40 z-20 transform rotate-12"></i>
+                    <i class="fas fa-leaf absolute -bottom-6 -right-6 text-5xl text-orange opacity-40 z-20 transform rotate-12"></i>
                 </div>
             </div>
 
             <div class="w-full md:w-1/2 text-center md:text-left fade-in-section">
                 <h2 class="font-serif text-4xl md:text-5xl text-sage-dark mb-4">Nosso Amor por Jardins</h2>
-                <h3 class="font-serif italic text-2xl text-rose mb-8">(E um ao outro)</h3>
+                <h3 class="font-serif italic text-2xl text-rose-dark mb-8">(E um ao outro)</h3>
                 
                 <div class="space-y-6 text-gray-600 leading-relaxed font-light">
                     <p>
@@ -124,8 +144,8 @@
                     </p>
                 </div>
                 
-                <div class="mt-10 inline-block font-serif text-3xl text-sage italic">
-                    Davi <span class="text-rose text-xl mx-2">&</span> Ingrid
+                <div class="mt-10 inline-block font-serif text-3xl text-sage-dark italic">
+                    Davi <span class="text-orange text-xl mx-2">&</span> Ingrid
                 </div>
             </div>
         </div>
@@ -135,7 +155,7 @@
         <div class="max-w-4xl mx-auto fade-in-section">
             <div class="text-center mb-16">
                 <h2 class="font-serif text-4xl md:text-5xl text-sage-dark mb-4">Programação do Dia</h2>
-                <div class="w-24 h-1 bg-orange mx-auto mb-6"></div>
+                <div class="w-24 h-1 bg-gradient-to-r from-orange to-rose-dark mx-auto mb-6"></div>
                 <p class="text-gray-500 italic">O que esperar do nosso momento especial</p>
             </div>
 
@@ -146,7 +166,7 @@
                         <h4 class="font-serif text-xl font-bold text-sage-dark">17:00</h4>
                     </div>
                     <div class="absolute left-0 md:left-1/2 transform translate-x-[9px] md:-translate-x-1/2 w-6 h-6 rounded-full bg-orange border-4 border-white shadow"></div>
-                    <div class="md:w-5/12 text-left pl-0 md:pl-8 w-full mt-2 md:mt-0 bg-cream md:bg-transparent p-4 md:p-0 rounded-lg shadow-sm md:shadow-none border md:border-none border-rose-light">
+                    <div class="md:w-5/12 text-left pl-0 md:pl-8 w-full mt-2 md:mt-0 bg-offwhite md:bg-transparent p-4 md:p-0 rounded-lg shadow-sm md:shadow-none border md:border-none border-rose-light">
                         <h3 class="font-serif text-xl text-textDark mb-1">Fotos de Boas-vindas & Coquetel</h3>
                         <p class="text-gray-500 text-sm">Chegue cedo, pegue um drink e desfrute da música ambiente enquanto o sol começa a baixar.</p>
                     </div>
@@ -156,8 +176,8 @@
                     <div class="md:w-5/12 text-left pl-0 md:pl-8 w-full">
                         <h4 class="font-serif text-xl font-bold text-sage-dark">18:00</h4>
                     </div>
-                    <div class="absolute left-0 md:left-1/2 transform translate-x-[9px] md:-translate-x-1/2 w-6 h-6 rounded-full bg-sage border-4 border-white shadow"></div>
-                    <div class="md:w-5/12 text-left md:text-right pr-0 md:pr-8 w-full mt-2 md:mt-0 bg-cream md:bg-transparent p-4 md:p-0 rounded-lg shadow-sm md:shadow-none border md:border-none border-rose-light">
+                    <div class="absolute left-0 md:left-1/2 transform translate-x-[9px] md:-translate-x-1/2 w-6 h-6 rounded-full bg-rose-light border-4 border-white shadow"></div>
+                    <div class="md:w-5/12 text-left md:text-right pr-0 md:pr-8 w-full mt-2 md:mt-0 bg-offwhite md:bg-transparent p-4 md:p-0 rounded-lg shadow-sm md:shadow-none border md:border-none border-rose-light">
                         <h3 class="font-serif text-xl text-textDark mb-1">Programa do Jantar</h3>
                         <p class="text-gray-500 text-sm">Um jantar delicioso servido sob as estrelas e luzes do jardim.</p>
                     </div>
@@ -167,8 +187,8 @@
                     <div class="md:w-5/12 text-left md:text-right pr-0 md:pr-8 w-full">
                         <h4 class="font-serif text-xl font-bold text-sage-dark">19:00</h4>
                     </div>
-                    <div class="absolute left-0 md:left-1/2 transform translate-x-[9px] md:-translate-x-1/2 w-6 h-6 rounded-full bg-rose-dark border-4 border-white shadow"></div>
-                    <div class="md:w-5/12 text-left pl-0 md:pl-8 w-full mt-2 md:mt-0 bg-cream md:bg-transparent p-4 md:p-0 rounded-lg shadow-sm md:shadow-none border md:border-none border-rose-light">
+                    <div class="absolute left-0 md:left-1/2 transform translate-x-[9px] md:-translate-x-1/2 w-6 h-6 rounded-full bg-rose border-4 border-white shadow"></div>
+                    <div class="md:w-5/12 text-left pl-0 md:pl-8 w-full mt-2 md:mt-0 bg-offwhite md:bg-transparent p-4 md:p-0 rounded-lg shadow-sm md:shadow-none border md:border-none border-rose-light">
                         <h3 class="font-serif text-xl text-textDark mb-1">Brindes & Discursos</h3>
                         <p class="text-gray-500 text-sm">Prepara-se para rir e chorar com as palavras de nossos padrinhos e familiares.</p>
                     </div>
@@ -178,8 +198,8 @@
                     <div class="md:w-5/12 text-left pl-0 md:pl-8 w-full">
                         <h4 class="font-serif text-xl font-bold text-sage-dark">20:00</h4>
                     </div>
-                    <div class="absolute left-0 md:left-1/2 transform translate-x-[9px] md:-translate-x-1/2 w-6 h-6 rounded-full bg-sage border-4 border-white shadow"></div>
-                    <div class="md:w-5/12 text-left md:text-right pr-0 md:pr-8 w-full mt-2 md:mt-0 bg-cream md:bg-transparent p-4 md:p-0 rounded-lg shadow-sm md:shadow-none border md:border-none border-rose-light">
+                    <div class="absolute left-0 md:left-1/2 transform translate-x-[9px] md:-translate-x-1/2 w-6 h-6 rounded-full bg-rose-dark border-4 border-white shadow"></div>
+                    <div class="md:w-5/12 text-left md:text-right pr-0 md:pr-8 w-full mt-2 md:mt-0 bg-offwhite md:bg-transparent p-4 md:p-0 rounded-lg shadow-sm md:shadow-none border md:border-none border-rose-light">
                         <h3 class="font-serif text-xl text-textDark mb-1">Fotos Oficiais</h3>
                         <p class="text-gray-500 text-sm">Hora de registrar a presença de todos. Prepare seu melhor sorriso!</p>
                     </div>
@@ -189,8 +209,8 @@
                     <div class="md:w-5/12 text-left md:text-right pr-0 md:pr-8 w-full">
                         <h4 class="font-serif text-xl font-bold text-sage-dark">21:00</h4>
                     </div>
-                    <div class="absolute left-0 md:left-1/2 transform translate-x-[9px] md:-translate-x-1/2 w-6 h-6 rounded-full bg-rose border-4 border-white shadow"></div>
-                    <div class="md:w-5/12 text-left pl-0 md:pl-8 w-full mt-2 md:mt-0 bg-cream md:bg-transparent p-4 md:p-0 rounded-lg shadow-sm md:shadow-none border md:border-none border-rose-light">
+                    <div class="absolute left-0 md:left-1/2 transform translate-x-[9px] md:-translate-x-1/2 w-6 h-6 rounded-full bg-sage border-4 border-white shadow"></div>
+                    <div class="md:w-5/12 text-left pl-0 md:pl-8 w-full mt-2 md:mt-0 bg-offwhite md:bg-transparent p-4 md:p-0 rounded-lg shadow-sm md:shadow-none border md:border-none border-rose-light">
                         <h3 class="font-serif text-xl text-textDark mb-1">Bar Aberto & Festa</h3>
                         <p class="text-gray-500 text-sm">A pista de dança está liberada. Vamos celebrar a noite toda!</p>
                     </div>
@@ -200,15 +220,15 @@
         </div>
     </section>
 
-    <section id="detalhes" class="py-24 px-6 md:px-12 bg-sage-light/20 relative">
+    <section id="detalhes" class="py-24 px-6 md:px-12 bg-cream relative">
         <div class="floral-divider absolute top-0 left-0 w-full transform -translate-y-1/2"></div>
         
         <div class="max-w-6xl mx-auto text-center fade-in-section">
             <h2 class="font-serif text-4xl md:text-5xl text-sage-dark mb-16">Detalhes da Recepção</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-sage hover:-translate-y-2 transition-transform duration-300">
-                    <div class="w-16 h-16 bg-cream rounded-full flex items-center justify-center mx-auto mb-6 text-sage text-2xl">
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-rose-dark hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-16 h-16 bg-offwhite rounded-full flex items-center justify-center mx-auto mb-6 text-rose-dark text-2xl">
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
                     <h3 class="font-serif text-2xl text-textDark mb-4">O Local</h3>
@@ -217,8 +237,8 @@
                     </p>
                 </div>
 
-                <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-orange hover:-translate-y-2 transition-transform duration-300">
-                    <div class="w-16 h-16 bg-cream rounded-full flex items-center justify-center mx-auto mb-6 text-orange text-2xl">
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-orange hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-16 h-16 bg-offwhite rounded-full flex items-center justify-center mx-auto mb-6 text-orange text-2xl">
                         <i class="fas fa-tshirt"></i>
                     </div>
                     <h3 class="font-serif text-2xl text-textDark mb-4">Traje</h3>
@@ -227,8 +247,8 @@
                     </p>
                 </div>
 
-                <div class="bg-white p-8 rounded-xl shadow-md border-t-4 border-rose hover:-translate-y-2 transition-transform duration-300">
-                    <div class="w-16 h-16 bg-cream rounded-full flex items-center justify-center mx-auto mb-6 text-rose text-2xl">
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-sage hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-16 h-16 bg-offwhite rounded-full flex items-center justify-center mx-auto mb-6 text-sage text-2xl">
                         <i class="fas fa-car"></i>
                     </div>
                     <h3 class="font-serif text-2xl text-textDark mb-4">Estacionamento</h3>
@@ -240,25 +260,25 @@
         </div>
     </section>
 
-    <section id="rsvp" class="py-24 px-6 md:px-12 bg-cream relative">
-        <div class="max-w-3xl mx-auto bg-white p-8 md:p-16 rounded-2xl shadow-xl border border-sage-light/30 relative overflow-hidden fade-in-section">
+    <section id="rsvp" class="py-24 px-6 md:px-12 bg-offwhite relative">
+        <div class="max-w-3xl mx-auto bg-white p-8 md:p-16 rounded-2xl shadow-xl border-t-8 border-rose relative overflow-hidden fade-in-section">
             <i class="fas fa-seedling absolute top-4 left-4 text-3xl text-sage/20"></i>
             <i class="fas fa-seedling absolute bottom-4 right-4 text-3xl text-sage/20 transform rotate-180"></i>
 
             <div class="text-center mb-10">
                 <h2 class="font-serif text-4xl text-sage-dark mb-4">Confirme sua Presença</h2>
-                <p class="text-gray-500 text-sm">Sua presença é o nosso maior presente. Por favor, confirme até 26 de Junho de 2026.</p>
+                <p class="text-gray-500 text-sm">Sua presença é o nosso maior presente.</p>
             </div>
 
             <form id="rsvp-form" class="space-y-6" onsubmit="submitRsvp(event)">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nome Completo</label>
-                        <input type="text" id="name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-sage focus:border-sage outline-none transition-colors bg-cream/50">
+                        <input type="text" id="name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-rose focus:border-rose outline-none transition-colors bg-offwhite/50">
                     </div>
                     <div>
                         <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                        <input type="email" id="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-sage focus:border-sage outline-none transition-colors bg-cream/50">
+                        <input type="email" id="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-rose focus:border-rose outline-none transition-colors bg-offwhite/50">
                     </div>
                 </div>
 
@@ -282,10 +302,10 @@
 
                 <div>
                     <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Mensagem para os noivos (Opcional)</label>
-                    <textarea id="message" rows="3" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-sage focus:border-sage outline-none transition-colors bg-cream/50"></textarea>
+                    <textarea id="message" rows="3" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-rose focus:border-rose outline-none transition-colors bg-offwhite/50"></textarea>
                 </div>
 
-                <button type="submit" class="w-full py-4 bg-sage-dark hover:bg-sage text-white font-bold rounded-lg uppercase tracking-widest text-sm transition-colors shadow-md">
+                <button type="submit" class="w-full py-4 bg-orange hover:bg-orange/90 text-white font-bold rounded-lg uppercase tracking-widest text-sm transition-colors shadow-md">
                     Enviar Confirmação
                 </button>
             </form>
@@ -301,17 +321,10 @@
         </div>
     </section>
 
-    <footer class="bg-sage-dark text-cream py-12 px-6 text-center">
+    <footer class="bg-sage-darker text-offwhite py-6 px-6 text-center">
         <div class="max-w-4xl mx-auto">
-            <h2 class="font-serif text-3xl mb-6">Davi & Ingrid</h2>
-            <p class="text-sm tracking-widest uppercase text-cream/70 mb-8">26 de Julho de 2026 • Rosas Buffet</p>
-            <div class="flex justify-center space-x-6 text-xl text-rose-light">
-                <a href="#" class="hover:text-white transition-colors"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="hover:text-white transition-colors"><i class="fas fa-envelope"></i></a>
-            </div>
-            <div class="mt-12 text-xs text-cream/40">
-                <p>&copy; 2026 Davi & Ingrid. Todos os direitos reservados.</p>
-            </div>
+            <h2 class="font-serif text-2xl md:text-3xl mb-2">Davi & Ingrid</h2>
+            <p class="text-xs md:text-sm tracking-widest uppercase text-offwhite/70">26 de Julho de 2026 • Rosas Buffet</p>
         </div>
     </footer>
 
@@ -377,29 +390,26 @@
 
             if (distance < 0) {
                 clearInterval(countdownInterval);
-                document.getElementById("countdown").innerHTML = "<div class='text-2xl font-serif'>O grande dia chegou!</div>";
+                document.getElementById("countdown").innerHTML = "<div class='text-2xl font-serif text-cream'>O grande dia chegou!</div>";
                 return;
             }
 
             document.getElementById("countdown").innerHTML = `
-                <div class="flex flex-col items-center">
-                    <span class="text-4xl md:text-5xl font-serif font-bold">${days}</span>
-                    <span class="text-xs uppercase tracking-widest mt-2">Dias</span>
+                <div class="flex flex-col items-center justify-center border border-white/20 rounded-lg bg-white/5 backdrop-blur-sm w-16 h-20 md:w-24 md:h-28 shadow-lg">
+                    <span class="text-3xl md:text-5xl font-serif font-bold text-cream">${days}</span>
+                    <span class="text-[9px] md:text-xs uppercase tracking-widest mt-1 md:mt-2 text-white/80">Dias</span>
                 </div>
-                <div class="text-4xl md:text-5xl font-light opacity-50">:</div>
-                <div class="flex flex-col items-center">
-                    <span class="text-4xl md:text-5xl font-serif font-bold">${hours.toString().padStart(2, '0')}</span>
-                    <span class="text-xs uppercase tracking-widest mt-2">Horas</span>
+                <div class="flex flex-col items-center justify-center border border-white/20 rounded-lg bg-white/5 backdrop-blur-sm w-16 h-20 md:w-24 md:h-28 shadow-lg">
+                    <span class="text-3xl md:text-5xl font-serif font-bold text-cream">${hours.toString().padStart(2, '0')}</span>
+                    <span class="text-[9px] md:text-xs uppercase tracking-widest mt-1 md:mt-2 text-white/80">Horas</span>
                 </div>
-                <div class="text-4xl md:text-5xl font-light opacity-50">:</div>
-                <div class="flex flex-col items-center">
-                    <span class="text-4xl md:text-5xl font-serif font-bold">${minutes.toString().padStart(2, '0')}</span>
-                    <span class="text-xs uppercase tracking-widest mt-2">Min</span>
+                <div class="flex flex-col items-center justify-center border border-white/20 rounded-lg bg-white/5 backdrop-blur-sm w-16 h-20 md:w-24 md:h-28 shadow-lg">
+                    <span class="text-3xl md:text-5xl font-serif font-bold text-cream">${minutes.toString().padStart(2, '0')}</span>
+                    <span class="text-[9px] md:text-xs uppercase tracking-widest mt-1 md:mt-2 text-white/80">Min</span>
                 </div>
-                <div class="text-4xl md:text-5xl font-light opacity-50">:</div>
-                <div class="flex flex-col items-center">
-                    <span class="text-4xl md:text-5xl font-serif font-bold">${seconds.toString().padStart(2, '0')}</span>
-                    <span class="text-xs uppercase tracking-widest mt-2">Seg</span>
+                <div class="flex flex-col items-center justify-center border border-white/20 rounded-lg bg-white/5 backdrop-blur-sm w-16 h-20 md:w-24 md:h-28 shadow-lg">
+                    <span class="text-3xl md:text-5xl font-serif font-bold text-cream">${seconds.toString().padStart(2, '0')}</span>
+                    <span class="text-[9px] md:text-xs uppercase tracking-widest mt-1 md:mt-2 text-white/80">Seg</span>
                 </div>
             `;
         }, 1000);
