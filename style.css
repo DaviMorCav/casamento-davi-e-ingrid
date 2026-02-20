@@ -1,11 +1,10 @@
 /* Custom Styles & Animations */
 body {
-    background-color: #ffdfb9;
+    background-color: #FCFAF8;
     color: #333333;
 }
 
 .hero-bg {
-    /* Imagem local apontando para a pasta imagens */
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('hero-bg.jpg');
     background-size: cover;
     background-position: center;
@@ -43,6 +42,7 @@ body {
     width: 2px;
     background-color: #A3B18A;
     transform: translateX(-50%);
+    opacity: 0.3;
 }
 
 @media (max-width: 768px) {
