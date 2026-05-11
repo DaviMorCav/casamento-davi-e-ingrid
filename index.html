@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Davi & Ingrid - Nosso Casamento</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Monsieur+La+Doulaise&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Newsreader:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kapakana&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        offwhite: '#FCFAF8',
+                        cream: '#ffdfb9',
+                        themePink: {
+                            light: '#FCECEF',
+                            DEFAULT: '#E5989B',
+                            dark: '#D6878A',
+                            darker: '#CE7E81'
+                        },
+                        themeYellow: {
+                            light: '#FFFDF7',
+                            DEFAULT: '#FDE29F',
+                            dark: '#E5C77A'
+                        },
+                        themeOrange: {
+                            light: '#FDECCD',
+                            DEFAULT: '#F4A261',
+                            dark: '#E76F51',
+                            darker: '#D65D3B'
+                        },
+                        rose: {
+                            light: '#f0a878',
+                            DEFAULT: '#f38498',
+                            dark: '#d53d6e'
+                        },
+                        orange: {
+                            DEFAULT: '#ff751f'
+                        },
+                        yellow: {
+                            DEFAULT: '#eab308'
+                        },
+                        grape: {
+                            DEFAULT: '#6B21A8'
+                        },
+                        textDark: '#333333'
+                    },
+                    fontFamily: {
+                        serif: ['"Playfair Display"', 'serif'],
+                        sans: ['Lato', 'sans-serif'],
+                        kapakana: ['"Kapakana"', 'cursive'],
+                        monsieur: ['"Monsieur La Doulaise"', 'cursive'],
+                        newsreader: ['"Newsreader"', 'serif'],
+                        instrument: ['"Instrument Serif"', 'serif'],
+                        mono: ['"Roboto Mono"', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Estilos Customizados e Nova Textura de Fundo Pontilhada Sutil */
+        body {
+            background-color: #FCFAF8;
+            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23F4A261' fill-opacity='0.05' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='1'/%3E%3Ccircle cx='13' cy='13' r='1'/%3E%3C/g%3E%3C/svg%3E");
+            color: #333333;
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(rgba(60, 30, 15, 0.4), rgba(60, 30, 15, 0.5)), url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+            will-change: opacity, visibility;
+        }
+
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* Estilo para simular bordas irregulares de aquarela na paleta de cores */
+        .watercolor-blob {
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            transition: all 0.3s ease;
+        }
+        .watercolor-blob:nth-child(2n) {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+        .watercolor-blob:nth-child(3n) {
+            border-radius: 50% 50% 40% 60% / 40% 60% 50% 50%;
+        }
+        
+        /* Ocultar barra de rolagem para o design horizontal */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-rose selection:text-white relative">
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 px-6 md:px-12 bg-transparent">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#" class="flex items-center gap-1 text-white transition-colors duration-300 drop-shadow-sm" id="nav-logo">
+                <span class="font-kapakana text-3xl md:text-4xl">D</span>
+                <span class="font-kapakana text-3xl md:text-4xl">&</span>
+                <span class="font-kapakana text-3xl md:text-4xl">I</span>
+            </a>
+            
+            <button class="md:hidden text-white focus:outline-none" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+
+            <ul class="hidden md:flex space-x-6 lg:space-x-8 text-sm uppercase tracking-widest text-white font-light font-newsreader items-center" id="nav-links">
+                <li><a href="#nossa-historia" class="inline-block hover:text-themeYellow-dark hover:scale-110 transition-all duration-300">História</a></li>
+                <li><a href="#detalhes" class="inline-block hover:text-themeOrange hover:scale-110 transition-all duration-300">Detalhes</a></li>
+                <li><a href="#traje" class="inline-block hover:text-themeYellow-dark hover:scale-110 transition-all duration-300">Traje</a></li>
+                <li><a href="#programacao" class="inline-block hover:text-themePink hover:scale-110 transition-all duration-300">Programação</a></li>
+                <li><a href="#presentes" class="inline-block hover:text-themePink hover:scale-110 transition-all duration-300">Presentes</a></li>
+            </ul>
+        </div>
+        
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-offwhite/95 backdrop-blur-sm shadow-lg border-t border-themeOrange py-4 px-6 transition-all duration-300">
+            <ul class="flex flex-col space-y-4 text-sm uppercase tracking-widest text-[#5C4033] font-newsreader font-light text-center">
+                <li><a href="#nossa-historia" class="block hover:text-themeYellow-dark hover:scale-105 transition-all duration-300" onclick="toggleMobileMenu()">História</a></li>
+                <li><a href="#detalhes" class="block hover:text-themeOrange hover:scale-105 transition-all duration-300" onclick="toggleMobileMenu()">Detalhes</a></li>
+                <li><a href="#traje" class="block hover:text-themeYellow-dark hover:scale-105 transition-all duration-300" onclick="toggleMobileMenu()">Traje</a></li>
+                <li><a href="#programacao" class="block hover:text-themePink hover:scale-105 transition-all duration-300" onclick="toggleMobileMenu()">Programação</a></li>
+                <li><a href="#presentes" class="block hover:text-themePink hover:scale-105 transition-all duration-300" onclick="toggleMobileMenu()">Presentes</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-bg h-screen relative flex items-center justify-center text-center">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="relative z-10 text-white px-4 fade-in-section is-visible">
+            <h1 class="text-7xl md:text-8xl lg:text-[10rem] mb-0 leading-none drop-shadow-lg flex items-center justify-center gap-3 md:gap-6 flex-wrap text-white z-10 relative">
+                <span class="font-kapakana">Davi</span>
+                <span class="font-kapakana text-6xl md:text-8xl lg:text-[10rem]">&</span>
+                <span class="font-kapakana">Ingrid</span>
+            </h1>
+            
+            <p class="font-newsreader font-light text-[11px] md:text-lg lg:text-2xl uppercase tracking-[0.05em] -mt-3 md:-mt-8 lg:-mt-10 mb-8 text-white drop-shadow-md relative z-0">Vão se casar</p>
+            
+            <button onclick="document.getElementById('rsvp').scrollIntoView({behavior: 'smooth'})" class="font-newsreader font-light inline-block px-6 py-3 bg-transparent border border-white/50 hover:bg-white hover:text-textDark transition-all duration-300 uppercase tracking-widest text-xs backdrop-blur-sm shadow-lg">
+                RSVP
+            </button>
+        </div>
+        
+        <!-- Data -->
+        <div class="absolute bottom-8 left-6 md:bottom-12 md:left-12 text-left z-10 fade-in-section is-visible">
+            <p class="font-newsreader font-light text-[10px] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.3em] text-cream drop-shadow-md">Julho 26, 2026, 15:00</p>
+        </div>
+
+        <!-- Indicador de Scroll -->
+        <div class="absolute bottom-8 md:bottom-12 w-full flex justify-center z-10 pointer-events-none">
+            <i class="fas fa-chevron-down text-2xl text-white/70 drop-shadow-md animate-bounce"></i>
+        </div>
+
+        <!-- Local -->
+        <div class="absolute bottom-8 right-6 md:bottom-12 md:right-12 text-right z-10 fade-in-section is-visible">
+            <p class="font-newsreader font-light text-[10px] md:text-xs uppercase tracking-[0.2em] md:tracking-[0.3em] text-cream drop-shadow-md">Rosas Buffet Maraponga</p>
+        </div>
+    </header>
+
+    <!-- Nossa História Section -->
+    <section id="nossa-historia" class="min-h-screen flex items-center py-16 md:py-20 px-6 md:px-12 overflow-hidden relative bg-[#FDF5E6]">
+        <div class="max-w-5xl mx-auto flex flex-col items-center w-full">
+            
+            <!-- Linha Superior: Título - Foto - Subtítulo -->
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 w-full fade-in-section">
+                <div class="md:w-1/3 text-center md:text-right">
+                    <h2 class="font-newsreader font-light text-[10px] md:text-base lg:text-xl uppercase tracking-wide text-[#5C4033] leading-relaxed">NOSSO AMOR<br>POR JARDINS</h2>
+                </div>
+
+                <div class="md:w-1/3 flex justify-center relative">
+                    <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Nosso Amor" class="w-40 h-64 md:w-48 md:h-72 object-cover rounded-lg shadow-lg relative z-10">
+                </div>
+
+                <div class="md:w-1/3 text-center md:text-left">
+                    <h3 class="font-newsreader font-light text-[10px] md:text-base lg:text-xl uppercase tracking-wide text-[#5C4033] leading-relaxed">(E UM<br>PELO OUTRO)</h3>
+                </div>
+            </div>
+
+            <!-- Texto da História -->
+            <div class="max-w-2xl mt-10 md:mt-12 text-center fade-in-section">
+                <div class="space-y-3 text-[#5C4033] leading-relaxed font-mono font-light text-[12px]">
+                    <p>
+                        A nossa história sempre teve cheiro de terra molhada e cores de flores ao entardecer. Desde o nosso primeiro encontro, soubemos que estávamos plantando algo muito especial. Crescemos, amadurecemos nossas raízes e, assim como um jardim, nosso amor floresceu de maneira única. Compartilhamos sonhos e uma vontade imensa de construir uma vida linda juntos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Details Section (Laranja) -->
+    <section id="detalhes" class="min-h-screen flex items-center py-20 px-6 md:px-12 bg-themeYellow-light relative overflow-hidden">
+        <div class="max-w-6xl mx-auto w-full flex flex-col lg:flex-row items-center gap-12 lg:gap-20 fade-in-section">
+            
+            <div class="w-full lg:w-1/2 flex justify-center lg:justify-end relative">
+                <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80" alt="Local do Casamento" class="w-full max-w-lg rounded-[2rem] object-cover h-[400px] lg:h-[600px] mix-blend-multiply opacity-80 sepia-[0.3] shadow-sm">
+            </div>
+
+            <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
+                
+                <h2 class="font-newsreader text-4xl md:text-5xl lg:text-6xl text-[#5C4033] mb-4">
+                    Detalhes da <span class="font-instrument italic text-themeOrange">Recepção</span>
+                </h2>
+
+                <p class="font-sans font-light text-sm md:text-base text-gray-600 mb-10 max-w-md leading-relaxed">
+                    Sua presença é muito importante para nós. Será uma alegria compartilhar esse momento tão especial ao seu lado.
+                </p>
+
+                <div class="w-full max-w-md space-y-4">
+                    <!-- Data -->
+                    <div class="bg-white rounded-[2rem] p-5 md:p-6 flex items-center gap-5 md:gap-6 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-gray-50 hover:transform hover:-translate-y-1 transition-transform duration-300">
+                        <div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-themeOrange-light text-themeOrange flex items-center justify-center text-xl shrink-0">
+                            <i class="far fa-calendar"></i>
+                        </div>
+                        <div class="text-left">
+                            <p class="font-sans font-medium uppercase tracking-[0.15em] text-[9px] md:text-[10px] text-gray-400 mb-1">Data</p>
+                            <p class="font-sans text-gray-800 text-sm md:text-base mb-0.5">26 de Julho de 2026</p>
+                            <p class="font-sans font-light text-xs text-gray-500">Domingo</p>
+                        </div>
+                    </div>
+
+                    <!-- Horário -->
+                    <div class="bg-white rounded-[2rem] p-5 md:p-6 flex items-center gap-5 md:gap-6 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-gray-50 hover:transform hover:-translate-y-1 transition-transform duration-300">
+                        <div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-themeOrange-light text-themeOrange flex items-center justify-center text-xl shrink-0">
+                            <i class="far fa-clock"></i>
+                        </div>
+                        <div class="text-left">
+                            <p class="font-sans font-medium uppercase tracking-[0.15em] text-[9px] md:text-[10px] text-gray-400 mb-1">Horário</p>
+                            <p class="font-sans text-gray-800 text-sm md:text-base mb-0.5">15h</p>
+                            <p class="font-sans font-light text-xs text-gray-500">Início da cerimônia</p>
+                        </div>
+                    </div>
+
+                    <!-- Local -->
+                    <a href="https://www.google.com/maps/search/Rosas+Buffet" target="_blank" class="bg-white rounded-[2rem] p-5 md:p-6 flex items-center justify-between shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-themeOrange/20 hover:border-themeOrange/40 hover:shadow-[0_12px_40px_rgba(0,0,0,0.08)] hover:transform hover:-translate-y-1 transition-all duration-300 group cursor-pointer block w-full relative">
+                        <div class="flex items-center gap-5 md:gap-6">
+                            <div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-themeOrange-light text-themeOrange flex items-center justify-center text-xl shrink-0 group-hover:bg-themeOrange group-hover:text-white transition-colors duration-300">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="text-left flex-1">
+                                <p class="font-sans font-medium uppercase tracking-[0.15em] text-[9px] md:text-[10px] text-gray-400 mb-1">Local</p>
+                                <p class="font-sans text-gray-800 text-sm md:text-base mb-0.5">Rosas Buffet</p>
+                                <p class="font-sans font-medium text-[11px] text-themeOrange flex items-center gap-1.5 group-hover:underline decoration-themeOrange/50 underline-offset-2">
+                                    Ver no mapa <i class="fas fa-external-link-alt text-[9px]"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Link RSVP -->
+                <button onclick="document.getElementById('rsvp').scrollIntoView({behavior: 'smooth'})" class="mt-8 font-newsreader italic text-[15px] text-themeOrange hover:text-[#5C4033] transition-colors underline underline-offset-4 decoration-themeOrange/30 hover:decoration-[#5C4033]/50">
+                    Clique aqui para confirmar sua presença
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Traje Section (Aquarela Original) -->
+    <section id="traje" class="min-h-screen flex flex-col justify-center py-20 px-0 bg-[#FCFAF8] relative overflow-hidden">
+        <div class="max-w-7xl mx-auto w-full fade-in-section">
+            
+            <div class="flex justify-center gap-3 md:gap-4 mb-10">
+                <div class="w-8 h-8 md:w-10 md:h-10 watercolor-blob bg-[#DE8C5A] shadow-sm"></div>
+                <div class="w-8 h-8 md:w-10 md:h-10 watercolor-blob bg-[#8FB97D] shadow-sm"></div>
+                <div class="w-8 h-8 md:w-10 md:h-10 watercolor-blob bg-[#EED971] shadow-sm"></div>
+                <div class="w-8 h-8 md:w-10 md:h-10 watercolor-blob bg-[#76A6D6] shadow-sm"></div>
+                <div class="w-8 h-8 md:w-10 md:h-10 watercolor-blob bg-[#5778B2] shadow-sm"></div>
+                <div class="w-8 h-8 md:w-10 md:h-10 watercolor-blob bg-[#A98AC3] shadow-sm"></div>
+                <div class="w-8 h-8 md:w-10 md:h-10 watercolor-blob bg-[#DE7098] shadow-sm"></div>
+                <div class="w-8 h-8 md:w-10 md:h-10 watercolor-blob bg-[#ECAFC5] shadow-sm"></div>
+            </div>
+
+            <div class="text-center mb-12 px-6">
+                <h2 class="font-newsreader text-4xl md:text-5xl lg:text-6xl text-[#5C4033] mb-4">Traje</h2>
+                <div class="flex items-center justify-center gap-2 mb-8">
+                    <div class="h-[1px] w-6 bg-themeYellow-dark/40"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-themeYellow-dark/40 transform rotate-45"></div>
+                    <div class="h-[1px] w-6 bg-themeYellow-dark/40"></div>
+                </div>
+                <p class="font-sans font-light text-[11px] md:text-sm text-[#7A7A7A] max-w-xl mx-auto leading-relaxed">
+                    Para celebrar este momento especial, sugerimos o traje passeio<br class="hidden md:block">
+                    completo / social na paleta de cores do evento.
+                </p>
+            </div>
+
+            <div class="relative w-full px-4 md:px-12 group">
+                <button id="traje-prev" class="absolute left-2 md:left-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white/90 backdrop-blur-sm rounded-full shadow-md flex items-center justify-center text-gray-400 hover:text-gray-600 z-20 transition-all opacity-100 md:opacity-0 group-hover:opacity-100">
+                    <i class="fas fa-chevron-left text-sm"></i>
+                </button>
+                <button id="traje-next" class="absolute right-2 md:right-6 top-1/2 -translate-y-1/2 w-10 h-10 md:w-12 md:h-12 bg-white/90 backdrop-blur-sm rounded-full shadow-md flex items-center justify-center text-gray-400 hover:text-gray-600 z-20 transition-all opacity-100 md:opacity-0 group-hover:opacity-100">
+                    <i class="fas fa-chevron-right text-sm"></i>
+                </button>
+
+                <div id="traje-carousel" class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar gap-4 md:gap-6 py-4 px-2 md:px-4 items-center">
+                    <div class="snap-center shrink-0 w-[65vw] sm:w-[220px] lg:w-[250px] h-[400px] lg:h-[480px] bg-gradient-to-b from-white to-[#f2f2f2] rounded-[2rem] shadow-sm relative overflow-hidden border border-gray-100/50 flex justify-center items-end">
+                        <img src="https://images.unsplash.com/photo-1594938298596-70f581d82003?auto=format&fit=crop&w=400&q=80" alt="Traje Masculino Azul" class="w-full h-[95%] object-cover object-top mix-blend-darken opacity-90 sepia-[0.1]">
+                    </div>
+                    <div class="snap-center shrink-0 w-[65vw] sm:w-[220px] lg:w-[250px] h-[400px] lg:h-[480px] bg-gradient-to-b from-white to-[#f2f2f2] rounded-[2rem] shadow-sm relative overflow-hidden border border-gray-100/50 flex justify-center items-end">
+                        <img src="https://images.unsplash.com/photo-1566737236500-c8ac43014a67?auto=format&fit=crop&w=400&q=80" alt="Vestido Rosa" class="w-full h-[95%] object-cover object-top mix-blend-darken opacity-90 sepia-[0.1]">
+                    </div>
+                    <div class="snap-center shrink-0 w-[65vw] sm:w-[220px] lg:w-[250px] h-[400px] lg:h-[480px] bg-gradient-to-b from-white to-[#f2f2f2] rounded-[2rem] shadow-sm relative overflow-hidden border border-gray-100/50 flex justify-center items-end">
+                        <img src="https://images.unsplash.com/photo-1572804013309-8898b1827419?auto=format&fit=crop&w=400&q=80" alt="Vestido Laranja" class="w-full h-[95%] object-cover object-top mix-blend-darken opacity-90 sepia-[0.1]">
+                    </div>
+                    <div class="snap-center shrink-0 w-[65vw] sm:w-[220px] lg:w-[250px] h-[400px] lg:h-[480px] bg-gradient-to-b from-white to-[#f2f2f2] rounded-[2rem] shadow-sm relative overflow-hidden border border-gray-100/50 flex justify-center items-end">
+                        <img src="https://images.unsplash.com/photo-1593030103066-0093718efeb9?auto=format&fit=crop&w=400&q=80" alt="Traje Masculino Bordô" class="w-full h-[95%] object-cover object-top mix-blend-darken opacity-90 sepia-[0.1]">
+                    </div>
+                    <div class="snap-center shrink-0 w-[65vw] sm:w-[220px] lg:w-[250px] h-[400px] lg:h-[480px] bg-gradient-to-b from-white to-[#f2f2f2] rounded-[2rem] shadow-sm relative overflow-hidden border border-gray-100/50 flex justify-center items-end">
+                        <img src="https://images.unsplash.com/photo-1568252542512-9fe8cf4c8fce?auto=format&fit=crop&w=400&q=80" alt="Vestido Amarelo" class="w-full h-[95%] object-cover object-top mix-blend-darken opacity-90 sepia-[0.1]">
+                    </div>
+                    <div class="snap-center shrink-0 w-[65vw] sm:w-[220px] lg:w-[250px] h-[400px] lg:h-[480px] bg-gradient-to-b from-white to-[#f2f2f2] rounded-[2rem] shadow-sm relative overflow-hidden border border-gray-100/50 flex justify-center items-end">
+                        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=400&q=80" alt="Vestido Magenta" class="w-full h-[95%] object-cover object-top mix-blend-darken opacity-90 sepia-[0.1]">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programação Section (Rosa) -->
+    <section id="programacao" class="min-h-screen flex flex-col items-center justify-center py-20 px-0 bg-[#FCFAF8] relative text-center overflow-hidden">
+        <div class="max-w-7xl mx-auto fade-in-section w-full flex flex-col items-center">
+            
+            <h2 class="font-newsreader text-4xl md:text-5xl lg:text-6xl text-[#5C4033] mb-12 md:mb-16">
+                Nossa <span class="font-instrument italic text-themePink">Programação</span>
+            </h2>
+            
+            <div class="relative w-full px-6 md:px-12 pb-10">
+                <div class="absolute bottom-5 left-0 w-full h-[1px] bg-themePink/20 z-0"></div>
+
+                <div class="flex overflow-x-auto md:overflow-visible snap-x snap-mandatory hide-scrollbar items-center justify-start md:justify-between relative z-10">
+                    
+                    <!-- Item 1: Recepção -->
+                    <div class="min-w-[70vw] sm:min-w-[220px] md:min-w-0 md:flex-1 flex flex-col items-center snap-center relative z-10 px-2 md:px-4">
+                        <div class="text-themePink flex items-center justify-center mb-6">
+                            <svg width="70" height="70" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                <defs>
+                                    <g id="recepcao-art">
+                                        <path d="M10 26 C12 25 20 25 22 26" />
+                                        <path d="M12 25 H20" />
+                                        <path d="M16 16 V25" />
+                                        <path d="M15.5 16 V25 M16.5 16 V25" />
+                                        <path d="M8 8 C8 18 24 18 24 8" />
+                                        <path d="M7 8 H25" />
+                                        <path d="M8 8 C12 9.5 20 9.5 24 8" />
+                                        <path d="M10 12 C13 13.5 19 13.5 22 12" />
+                                        <circle cx="14" cy="14" r="0.5" />
+                                        <circle cx="17" cy="15" r="0.5" />
+                                        <circle cx="15" cy="12" r="0.5" />
+                                        <circle cx="23" cy="7" r="3" />
+                                        <path d="M23 7 L21 5 M23 7 L25 5 M23 7 L25 9 M23 7 L21 9" />
+                                        <path d="M21.5 7 H22.5" />
+                                    </g>
+                                </defs>
+                                <use href="#recepcao-art" stroke-width="0.8"/>
+                                <use href="#recepcao-art" stroke-width="0.4" opacity="0.6" transform="translate(0.5, 0.5) rotate(1 16 16)"/>
+                                <use href="#recepcao-art" stroke-width="0.3" opacity="0.4" transform="translate(-0.5, -0.2) rotate(-1 16 16)"/>
+                            </svg>
+                        </div>
+                        <div class="font-kapakana text-2xl md:text-3xl lg:text-4xl text-themePink leading-none mb-0 bg-[#FCFAF8] px-3">15:00</div>
+                        <h3 class="font-instrument text-xl md:text-2xl lg:text-3xl text-[#5C4033] leading-tight uppercase tracking-wider -mt-1 bg-[#FCFAF8] px-3">RECEPÇÃO</h3>
+                    </div>
+
+                    <div class="w-[1px] h-32 bg-themePink/20 shrink-0 self-center hidden sm:block"></div>
+
+                    <!-- Item 2: Cerimônia -->
+                    <div class="min-w-[70vw] sm:min-w-[220px] md:min-w-0 md:flex-1 flex flex-col items-center snap-center relative z-10 px-2 md:px-4">
+                        <div class="text-themePink flex items-center justify-center mb-6">
+                            <svg width="70" height="70" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                <defs>
+                                    <g id="cerimonia-art">
+                                        <path d="M4 22 C2 20 4 16 8 16 L24 16 C28 16 30 20 28 22 C26 24 24 26 16 26 C8 26 6 24 4 22 Z"/>
+                                        <path d="M4 22 C4 24 6 28 16 28 C26 28 28 24 28 22"/>
+                                        <path d="M4 22 L2 24 L3 25 M28 22 L30 24 L29 25"/>
+                                        <circle cx="13" cy="14" r="5"/>
+                                        <circle cx="13" cy="14" r="4"/>
+                                        <path d="M19 9 A5 5 0 1 1 15 17 A5 5 0 0 1 19 9 Z"/>
+                                        <path d="M19 10 A4 4 0 1 1 16 16 A4 4 0 0 1 19 10 Z"/>
+                                        <path d="M17 9 L16 7 L19 6 L22 7 L21 9 Z"/>
+                                        <path d="M16 7 L22 7 M19 6 L19 9 M17.5 7 L19 9 L20.5 7"/>
+                                        <path d="M19 3 L19 5 M16 4 L17 5 M22 4 L21 5 M23 6 L25 7 M14 6 L12 7"/>
+                                        <path d="M16 17 C14 20 12 24 9 26 M16 17 C18 20 20 24 23 26"/>
+                                    </g>
+                                </defs>
+                                <use href="#cerimonia-art" stroke-width="0.8"/>
+                                <use href="#cerimonia-art" stroke-width="0.4" opacity="0.6" transform="translate(0.5, 0.5) rotate(1 16 16)"/>
+                                <use href="#cerimonia-art" stroke-width="0.3" opacity="0.4" transform="translate(-0.5, -0.2) rotate(-1 16 16)"/>
+                            </svg>
+                        </div>
+                        <div class="font-kapakana text-2xl md:text-xl lg:text-4xl text-themePink leading-none mb-0 bg-[#FCFAF8] px-3">16:00</div>
+                        <h3 class="font-instrument text-xl md:text-2xl lg:text-3xl text-[#5C4033] leading-tight uppercase tracking-wider -mt-1 bg-[#FCFAF8] px-3">CERIMÔNIA</h3>
+                    </div>
+
+                    <div class="w-[1px] h-32 bg-themePink/20 shrink-0 self-center hidden sm:block"></div>
+
+                    <!-- Item 3: Fotos -->
+                    <div class="min-w-[70vw] sm:min-w-[220px] md:min-w-0 md:flex-1 flex flex-col items-center snap-center relative z-10 px-2 md:px-4">
+                        <div class="text-themePink flex items-center justify-center mb-6">
+                            <svg width="70" height="70" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                <defs>
+                                    <g id="fotos-art">
+                                        <rect x="5" y="11" width="22" height="13" rx="2" />
+                                        <circle cx="16" cy="17.5" r="4.5" />
+                                        <circle cx="16" cy="17.5" r="2" />
+                                        <circle cx="17" cy="16.5" r="0.5" fill="currentColor"/>
+                                        <path d="M12 11 V7 H20 V11" /> 
+                                        <circle cx="16" cy="9" r="1.5" /> 
+                                        <path d="M8 11 V9 H10 V11" />
+                                        <path d="M22 11 V8 H24 V11" /> 
+                                        <circle cx="23" cy="14" r="1" /> 
+                                        <path d="M5 14 H27" stroke-dasharray="1 2" />
+                                        <path d="M16 5 L16 3 M12 6 L10 4 M20 6 L22 4" />
+                                    </g>
+                                </defs>
+                                <use href="#fotos-art" stroke-width="0.8"/>
+                                <use href="#fotos-art" stroke-width="0.4" opacity="0.6" transform="translate(0.5, 0.5) rotate(1 16 16)"/>
+                                <use href="#fotos-art" stroke-width="0.3" opacity="0.4" transform="translate(-0.5, -0.2) rotate(-1 16 16)"/>
+                            </svg>
+                        </div>
+                        <div class="font-kapakana text-2xl md:text-3xl lg:text-4xl text-themePink leading-none mb-0 bg-[#FCFAF8] px-3">17:00</div>
+                        <h3 class="font-instrument text-xl md:text-2xl lg:text-3xl text-[#5C4033] leading-tight uppercase tracking-wider -mt-1 bg-[#FCFAF8] px-3">FOTOS</h3>
+                    </div>
+
+                    <div class="w-[1px] h-32 bg-themePink/20 shrink-0 self-center hidden sm:block"></div>
+
+                    <!-- Item 4: Bingo -->
+                    <div class="min-w-[70vw] sm:min-w-[220px] md:min-w-0 md:flex-1 flex flex-col items-center snap-center relative z-10 px-2 md:px-4">
+                        <div class="text-themePink flex items-center justify-center mb-6">
+                            <svg width="70" height="70" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                <defs>
+                                    <g id="bingo-art">
+                                        <g transform="translate(0, -2) rotate(-5 16 16)">
+                                            <rect x="8" y="6" width="16" height="20" rx="1" />
+                                            <path d="M8 10 H24 M8 14 H24 M8 18 H24 M8 22 H24" />
+                                            <path d="M11.2 6 V26 M14.4 6 V26 M17.6 6 V26 M20.8 6 V26" />
+                                            <circle cx="12.8" cy="12" r="1" fill="currentColor"/>
+                                            <circle cx="19.2" cy="16" r="1" fill="currentColor"/>
+                                            <circle cx="16" cy="20" r="1" fill="currentColor"/>
+                                        </g>
+                                        <circle cx="6" cy="23" r="3" /><path d="M5 23 H7 M6 22 V24" />
+                                        <circle cx="26" cy="19" r="3" /><path d="M25 19 H27" />
+                                        <circle cx="22" cy="27" r="3" /><path d="M21 27 H23 M22 26 V28" />
+                                    </g>
+                                </defs>
+                                <use href="#bingo-art" stroke-width="0.8"/>
+                                <use href="#bingo-art" stroke-width="0.4" opacity="0.6" transform="translate(0.5, 0.5) rotate(1 16 16)"/>
+                                <use href="#bingo-art" stroke-width="0.3" opacity="0.4" transform="translate(-0.5, -0.2) rotate(-1 16 16)"/>
+                            </svg>
+                        </div>
+                        <div class="font-kapakana text-2xl md:text-3xl lg:text-4xl text-themePink leading-none mb-0 bg-[#FCFAF8] px-3">18:00</div>
+                        <h3 class="font-instrument text-xl md:text-2xl lg:text-3xl text-[#5C4033] leading-tight uppercase tracking-wider -mt-1 bg-[#FCFAF8] px-3">BINGO</h3>
+                    </div>
+
+                    <div class="w-[1px] h-32 bg-themePink/20 shrink-0 self-center hidden sm:block"></div>
+
+                    <!-- Item 5: Festa -->
+                    <div class="min-w-[70vw] sm:min-w-[220px] md:min-w-0 md:flex-1 flex flex-col items-center snap-center relative z-10 px-2 md:px-4">
+                        <div class="text-themePink flex items-center justify-center mb-6">
+                            <svg width="70" height="70" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+                                <defs>
+                                    <g id="festa-art">
+                                        <path d="M8 26 C8 27 24 27 24 26" />
+                                        <path d="M12 28 H20 M14 26 V28 M18 26 V28" />
+                                        <path d="M9 26 V19 H23 V26" />
+                                        <path d="M9 19 C9 20 23 20 23 19" />
+                                        <path d="M11.5 19 V13 H20.5 V19" />
+                                        <path d="M11.5 13 C11.5 14 20.5 14 20.5 13" />
+                                        <path d="M14 13 V7 H18 V13" />
+                                        <path d="M14 7 C14 8 18 8 18 7" />
+                                        <path d="M16 7 C14 5 13 4 16 3 C19 4 18 5 16 7 Z" />
+                                        <path d="M10 19 V21 M12 19 V22 M14 19 V20.5 M16 19 V22 M18 19 V21 M20 19 V22.5 M22 19 V20" />
+                                        <path d="M12.5 13 V15 M14.5 13 V16 M16 13 V14.5 M17.5 13 V16 M19.5 13 V15" />
+                                        <path d="M15 7 V9 M17 7 V8.5" />
+                                        <path d="M9 23 C9 24 23 24 23 23" stroke-dasharray="2 2"/>
+                                        <path d="M11.5 16.5 C11.5 17.5 20.5 17.5 20.5 16.5" stroke-dasharray="1.5 2"/>
+                                    </g>
+                                </defs>
+                                <use href="#festa-art" stroke-width="0.8"/>
+                                <use href="#festa-art" stroke-width="0.4" opacity="0.6" transform="translate(0.5, 0.5) rotate(1 16 16)"/>
+                                <use href="#festa-art" stroke-width="0.3" opacity="0.4" transform="translate(-0.5, -0.2) rotate(-1 16 16)"/>
+                            </svg>
+                        </div>
+                        <div class="font-kapakana text-2xl md:text-3xl lg:text-4xl text-themePink leading-none mb-0 bg-[#FCFAF8] px-3">19:00</div>
+                        <h3 class="font-instrument text-xl md:text-2xl lg:text-3xl text-[#5C4033] leading-tight uppercase tracking-wider -mt-1 bg-[#FCFAF8] px-3">FESTA</h3>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Confirmação de Presença Section (Laranja) -->
+    <section id="rsvp" class="min-h-screen flex items-center justify-center py-20 px-6 md:px-12 relative overflow-hidden bg-center bg-cover bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1920&q=80');">
+        <div class="absolute inset-0 bg-black/60"></div>
+        
+        <div class="relative z-10 w-full max-w-4xl mx-auto flex flex-col items-center text-center fade-in-section">
+            
+            <h2 class="font-newsreader text-4xl md:text-5xl lg:text-6xl text-white mb-4">
+                Confirme sua <span class="font-instrument italic text-themeOrange">Presença</span>
+            </h2>
+
+            <p class="font-sans font-light text-xs md:text-sm text-white/80 max-w-lg mx-auto leading-relaxed mb-10">
+                Preencha o formulário abaixo para confirmar que estará conosco neste dia tão especial.
+            </p>
+
+            <div class="bg-white p-8 md:p-10 rounded-[2rem] shadow-2xl w-full max-w-lg relative overflow-hidden">
+                <form id="rsvp-form" class="space-y-5 text-left" onsubmit="submitRsvp(event)">
+                    <div>
+                        <label for="name" class="block text-[10px] font-medium text-gray-500 uppercase tracking-widest mb-1.5 ml-1">Nome Completo</label>
+                        <input type="text" id="name" placeholder="Seu nome" required class="w-full px-5 py-3.5 rounded-xl border border-gray-100 bg-[#FCFAF8] focus:ring-2 focus:ring-themeOrange focus:border-themeOrange outline-none transition-colors text-sm text-gray-700 placeholder-gray-400">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-[10px] font-medium text-gray-500 uppercase tracking-widest mb-1.5 ml-1">E-mail</label>
+                        <input type="email" id="email" placeholder="seu@email.com" required class="w-full px-5 py-3.5 rounded-xl border border-gray-100 bg-[#FCFAF8] focus:ring-2 focus:ring-themeOrange focus:border-themeOrange outline-none transition-colors text-sm text-gray-700 placeholder-gray-400">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-[10px] font-medium text-gray-500 uppercase tracking-widest mb-1.5 ml-1">Telefone</label>
+                        <input type="tel" id="phone" placeholder="(11) 99999-9999" required class="w-full px-5 py-3.5 rounded-xl border border-gray-100 bg-[#FCFAF8] focus:ring-2 focus:ring-themeOrange focus:border-themeOrange outline-none transition-colors text-sm text-gray-700 placeholder-gray-400">
+                    </div>
+                    <button type="submit" class="w-full py-4 mt-4 bg-themeOrange hover:bg-themeOrange-dark text-white rounded-full uppercase tracking-[0.15em] text-[11px] font-medium transition-colors shadow-md">
+                        Confirmar Presença
+                    </button>
+                </form>
+                
+                <div id="rsvp-success" class="hidden absolute inset-0 bg-white flex-col items-center justify-center p-8 text-center z-10">
+                    <div class="w-16 h-16 bg-themeOrange-light rounded-full flex items-center justify-center text-themeOrange text-2xl mb-4">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <h3 class="font-newsreader text-2xl text-gray-800 mb-2">Presença Confirmada!</h3>
+                    <p class="font-sans font-light text-sm text-gray-500">Agradecemos por confirmar. Nos vemos lá!</p>
+                    <button onclick="resetForm()" class="mt-6 text-xs uppercase tracking-widest text-themeOrange font-medium hover:text-[#5C4033] transition-colors underline underline-offset-4 decoration-transparent hover:decoration-[#5C4033]/30">Enviar nova resposta</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Presentes Section (Rosa) -->
+    <section id="presentes" class="min-h-screen flex flex-col items-center justify-center py-20 px-6 md:px-12 bg-[#FCFAF8] relative">
+        <div class="max-w-4xl mx-auto flex flex-col items-center text-center fade-in-section w-full">
+            
+            <h2 class="font-newsreader text-4xl md:text-5xl lg:text-6xl text-[#5C4033] mb-6">
+                Sugestões de <span class="font-instrument italic text-themePink">Presentes</span>
+            </h2>
+
+            <p class="font-sans font-light text-xs md:text-sm text-[#7A7A7A] max-w-xl mx-auto leading-relaxed mb-10">
+                Se deseja nos presentear, acesse nossa lista e escolha um item.<br class="hidden md:block">
+                Cada gesto de carinho tornará esse dia ainda mais especial.
+            </p>
+
+            <button onclick="openGiftsPage()" class="bg-themePink hover:bg-themePink-dark text-white px-8 py-4 rounded-full font-sans font-light text-xs md:text-sm flex items-center gap-3 transition-colors shadow-md group">
+                <i class="fas fa-gift"></i>
+                Ver Lista de Presentes
+                <i class="fas fa-chevron-right text-[10px] ml-1 group-hover:translate-x-1 transition-transform"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Countdown Section (Fundo Claro Areia) -->
+    <section class="bg-[#FDF5E6] py-16 md:py-24 px-4 relative overflow-hidden flex flex-col justify-center border-t border-[#5C4033]/5">
+        <div class="max-w-4xl mx-auto text-center relative z-10 w-full flex flex-col items-center">
+            
+            <h3 class="font-sans font-light text-[10px] md:text-xs uppercase tracking-[0.3em] text-[#5C4033]/60 mb-6 md:mb-8">Contagem Regressiva</h3>
+            
+            <div class="flex justify-center items-center gap-3 md:gap-6 mb-8 md:mb-10" id="countdown">
+                <!-- Injected via JS -->
+            </div>
+
+            <div class="flex items-center justify-center gap-3 text-[#5C4033]/60 uppercase tracking-[0.2em] font-sans font-light text-[9px] md:text-[11px]">
+                <span>26 de Julho de 2026</span>
+                <span class="w-1 h-1 bg-[#5C4033]/30 rounded-full"></span>
+                <span>Rosas Buffet</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- LISTA DE PRESENTES FULLSCREEN OVERLAY -->
+    <div id="gifts-page" class="fixed inset-0 z-[200] hidden bg-[#F8F9FA] overflow-y-auto w-full h-full transition-opacity duration-300 opacity-0">
+        <div class="bg-white shadow-sm sticky top-0 z-20">
+            <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-4">
+                <button onclick="closeGiftsPage()" class="flex items-center gap-2 text-gray-500 hover:text-gray-800 transition-colors font-sans text-sm font-medium mr-auto">
+                    <i class="fas fa-arrow-left"></i> Voltar
+                </button>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 py-8">
+            <div id="gifts-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL PIX (JANELA FLUTUANTE DE PAGAMENTO) (Rosa) -->
+    <div id="pix-modal" class="fixed inset-0 z-[300] hidden items-center justify-center bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-300 px-4">
+        <div class="absolute inset-0 cursor-pointer" onclick="closePixModal()"></div>
+        <div id="pix-modal-content" class="bg-white p-6 md:p-8 rounded-3xl shadow-2xl max-w-sm w-full relative transform scale-95 transition-transform duration-300 flex flex-col items-center text-center border-t-8 border-themePink mx-auto">
+            <button onclick="closePixModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-800 transition-colors bg-gray-100 rounded-full w-8 h-8 flex items-center justify-center">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <h3 id="pix-gift-name" class="font-sans font-medium text-base md:text-lg text-gray-800 mb-1 mt-4">Nome do Presente</h3>
+            <p id="pix-gift-price" class="font-newsreader text-themePink font-bold text-2xl md:text-3xl mb-6">R$00,00</p>
+            
+            <hr class="w-full border-gray-100 mb-6">
+
+            <div class="mb-4 w-full">
+                <p class="text-xs uppercase tracking-widest text-gray-500 mb-3 font-semibold">Escaneie o QR Code</p>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=00020126360014br.gov.bcb.pix0114+55859999999995204000053039865802BR5915DAVI E INGRID6009FORTALEZA62070503***6304" alt="QR Code PIX" class="w-32 h-32 md:w-36 md:h-36 mx-auto border-2 border-gray-100 p-2 rounded-xl">
+            </div>
+            
+            <div class="w-full mt-2">
+                <p class="text-xs uppercase tracking-widest text-gray-500 mb-2 font-semibold">Chave Aleatória</p>
+                <div class="flex items-center justify-between bg-gray-50 p-2.5 rounded-xl border border-dashed border-gray-300">
+                    <span id="pix-key" class="font-mono text-[10px] md:text-xs text-gray-500 truncate select-all mr-2 text-left w-full">32e5d9c0-1b2a-4f5c-8d9e-0a1b2c3d4e5f</span>
+                    <button onclick="copyPixKey()" class="bg-themePink hover:bg-themePink-dark text-white py-1.5 px-3 rounded-lg transition-colors flex-shrink-0 text-xs font-medium flex items-center gap-1.5" title="Copiar chave PIX">
+                        <i class="far fa-copy"></i> Copiar
+                    </button>
+                </div>
+                <p id="copy-msg" class="text-xs text-themePink font-medium mt-2 h-4 opacity-0 transition-opacity">Chave copiada com sucesso!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        const navbar = document.getElementById('navbar');
+        const navLinksContainer = document.getElementById('nav-links');
+        const navLogo = document.getElementById('nav-logo');
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.remove('bg-transparent', 'py-4');
+                navbar.classList.add('bg-white', 'shadow-md', 'py-2');
+                navLogo.classList.replace('text-white', 'text-[#5C4033]');
+                mobileBtn.classList.replace('text-white', 'text-[#5C4033]');
+                navLinksContainer.classList.replace('text-white', 'text-[#5C4033]');
+            } else {
+                navbar.classList.add('bg-transparent', 'py-4');
+                navbar.classList.remove('bg-white', 'shadow-md', 'py-2');
+                navLogo.classList.replace('text-[#5C4033]', 'text-white');
+                mobileBtn.classList.replace('text-[#5C4033]', 'text-white');
+                navLinksContainer.classList.replace('text-[#5C4033]', 'text-white');
+            }
+        });
+
+        mobileBtn.addEventListener('click', () => document.getElementById('mobile-menu').classList.toggle('hidden'));
+        function toggleMobileMenu() { document.getElementById('mobile-menu').classList.add('hidden'); }
+
+        const trajeCarousel = document.getElementById('traje-carousel');
+        const trajePrevBtn = document.getElementById('traje-prev');
+        const trajeNextBtn = document.getElementById('traje-next');
+
+        if (trajeCarousel && trajePrevBtn && trajeNextBtn) {
+            trajeNextBtn.addEventListener('click', () => {
+                trajeCarousel.scrollBy({ left: window.innerWidth > 768 ? 280 : window.innerWidth * 0.7, behavior: 'smooth' });
+            });
+            trajePrevBtn.addEventListener('click', () => {
+                trajeCarousel.scrollBy({ left: window.innerWidth > 768 ? -280 : -window.innerWidth * 0.7, behavior: 'smooth' });
+            });
+        }
+
+        const countDownDate = new Date("Jul 26, 2026 15:00:00").getTime();
+        const countdownInterval = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("countdown").innerHTML = "<div class='text-2xl font-newsreader font-light text-[#5C4033]'>O grande dia chegou!</div>";
+                return;
+            }
+            document.getElementById("countdown").innerHTML = `
+                <div class="flex flex-col items-center">
+                    <div class="w-[60px] h-[65px] sm:w-[75px] sm:h-[80px] md:w-[90px] md:h-[95px] border border-[#5C4033]/10 rounded-2xl md:rounded-3xl flex items-center justify-center bg-white/60 backdrop-blur-sm mb-3 shadow-sm transition-all hover:bg-white">
+                        <span class="font-newsreader font-light text-2xl sm:text-3xl md:text-4xl text-[#5C4033]">${days}</span>
+                    </div>
+                    <span class="font-sans font-light text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-[#5C4033]/60">Dias</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-[60px] h-[65px] sm:w-[75px] sm:h-[80px] md:w-[90px] md:h-[95px] border border-[#5C4033]/10 rounded-2xl md:rounded-3xl flex items-center justify-center bg-white/60 backdrop-blur-sm mb-3 shadow-sm transition-all hover:bg-white">
+                        <span class="font-newsreader font-light text-2xl sm:text-3xl md:text-4xl text-[#5C4033]">${hours.toString().padStart(2, '0')}</span>
+                    </div>
+                    <span class="font-sans font-light text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-[#5C4033]/60">Horas</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-[60px] h-[65px] sm:w-[75px] sm:h-[80px] md:w-[90px] md:h-[95px] border border-[#5C4033]/10 rounded-2xl md:rounded-3xl flex items-center justify-center bg-white/60 backdrop-blur-sm mb-3 shadow-sm transition-all hover:bg-white">
+                        <span class="font-newsreader font-light text-2xl sm:text-3xl md:text-4xl text-[#5C4033]">${minutes.toString().padStart(2, '0')}</span>
+                    </div>
+                    <span class="font-sans font-light text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-[#5C4033]/60">Minutos</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="w-[60px] h-[65px] sm:w-[75px] sm:h-[80px] md:w-[90px] md:h-[95px] border border-[#5C4033]/10 rounded-2xl md:rounded-3xl flex items-center justify-center bg-white/60 backdrop-blur-sm mb-3 shadow-sm transition-all hover:bg-white">
+                        <span class="font-newsreader font-light text-2xl sm:text-3xl md:text-4xl text-[#5C4033]">${seconds.toString().padStart(2, '0')}</span>
+                    </div>
+                    <span class="font-sans font-light text-[9px] md:text-[10px] uppercase tracking-[0.2em] text-[#5C4033]/60">Segundos</span>
+                </div>
+            `;
+        }, 1000);
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); } });
+        }, { threshold: 0.15 });
+        document.querySelectorAll('.fade-in-section').forEach((section) => observer.observe(section));
+
+        function submitRsvp(e) { 
+            e.preventDefault(); 
+            const btn = e.target.querySelector('button[type="submit"]'); 
+            btn.innerHTML = 'Enviando...'; 
+            btn.disabled = true; 
+            
+            setTimeout(() => { 
+                document.getElementById('rsvp-success').classList.remove('hidden'); 
+                document.getElementById('rsvp-success').classList.add('flex'); 
+                btn.innerHTML = 'Confirmar Presença'; 
+                btn.disabled = false;
+            }, 1500); 
+        }
+        
+        function resetForm() { 
+            document.getElementById('rsvp-form').reset(); 
+            document.getElementById('rsvp-success').classList.add('hidden'); 
+            document.getElementById('rsvp-success').classList.remove('flex'); 
+        }
+
+        const giftsPage = document.getElementById('gifts-page');
+        const giftsGrid = document.getElementById('gifts-grid');
+
+        function openGiftsPage() {
+            giftsPage.classList.remove('hidden');
+            setTimeout(() => {
+                giftsPage.classList.remove('opacity-0');
+            }, 10);
+            document.body.style.overflow = 'hidden'; 
+            renderGifts();
+        }
+
+        function closeGiftsPage() {
+            giftsPage.classList.add('opacity-0');
+            setTimeout(() => {
+                giftsPage.classList.add('hidden');
+                document.body.style.overflow = 'auto'; 
+            }, 300);
+        }
+
+        function renderGifts() {
+            if (giftsGrid.children.length > 0) return; 
+
+            const baseGifts = [
+                { name: "Edredom", price: "160,00", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=400&q=80" },
+                { name: "Mesa de centro", price: "170,00", img: "https://images.unsplash.com/photo-1532372320572-cda25653a26d?auto=format&fit=crop&w=400&q=80" },
+                { name: "Jogo de jantar com 20 peças", price: "250,00", img: "https://images.unsplash.com/photo-1610260408466-26756855ceea?auto=format&fit=crop&w=400&q=80" },
+                { name: "Aparelho de fondue", price: "260,00", img: "https://images.unsplash.com/photo-1546241072-48010ad2862c?auto=format&fit=crop&w=400&q=80" },
+                { name: "Prateleira", price: "300,00", img: "https://images.unsplash.com/photo-1532323544230-7191fd51bc1b?auto=format&fit=crop&w=400&q=80" },
+                { name: "Tapete", price: "300,00", img: "https://images.unsplash.com/photo-1562582664-8a8803c13105?auto=format&fit=crop&w=400&q=80" },
+                { name: "Jogo de mesa posta", price: "300,00", img: "https://images.unsplash.com/photo-1576186985161-0428bc6baec8?auto=format&fit=crop&w=400&q=80" },
+                { name: "Passeio de buggy com emoção", price: "300,00", img: "https://images.unsplash.com/photo-1526404450956-2db4758b2fc1?auto=format&fit=crop&w=400&q=80" }
+            ];
+
+            let html = '';
+            
+            for (let i = 0; i < 36; i++) {
+                const template = baseGifts[i % baseGifts.length];
+                const escapedName = template.name.replace(/'/g, "\\'");
+                
+                html += `
+                    <div class="bg-white rounded-[24px] shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col overflow-hidden border border-gray-100 group">
+                        <div class="w-full h-48 bg-gray-100 overflow-hidden relative">
+                            <img src="${template.img}" alt="${template.name}" class="w-full h-full object-cover rounded-t-[24px] group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6 flex flex-col items-center text-center flex-1">
+                            <h4 class="text-[13px] md:text-sm text-gray-600 font-sans mb-3 flex-1">${template.name}</h4>
+                            <span class="text-base font-bold text-gray-800 font-sans mb-5">R$${template.price}</span>
+                            <button onclick="openPixModal('${escapedName}', '${template.price}')" class="w-[140px] py-2.5 rounded-full border border-themePink text-themePink hover:bg-themePink hover:text-white transition-colors font-sans text-sm font-medium tracking-wide">
+                                Presentear
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }
+            giftsGrid.innerHTML = html;
+        }
+
+        const pixModal = document.getElementById('pix-modal');
+        const pixModalContent = document.getElementById('pix-modal-content');
+
+        function openPixModal(name, price) {
+            document.getElementById('pix-gift-name').textContent = name;
+            document.getElementById('pix-gift-price').textContent = `R$ ${price}`;
+            
+            pixModal.classList.remove('hidden');
+            pixModal.classList.add('flex');
+            setTimeout(() => { 
+                pixModal.classList.remove('opacity-0'); 
+                pixModalContent.classList.remove('scale-95'); 
+            }, 10);
+        }
+
+        function closePixModal() {
+            pixModal.classList.add('opacity-0');
+            pixModalContent.classList.add('scale-95');
+            setTimeout(() => { 
+                pixModal.classList.add('hidden'); 
+                pixModal.classList.remove('flex');
+                document.getElementById('copy-msg').classList.add('opacity-0'); 
+            }, 300);
+        }
+
+        function copyPixKey() {
+            const key = document.getElementById('pix-key').innerText;
+            
+            const textArea = document.createElement("textarea");
+            textArea.value = key;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textArea);
+            
+            const msg = document.getElementById('copy-msg');
+            msg.classList.remove('opacity-0');
+            
+            setTimeout(() => msg.classList.add('opacity-0'), 2500);
+        }
+
+        function openGiftsPage_placeholder() {
+            // placeholder - substituir pela função de presentes real
+        }
+    </script>
+</body>
+</html>
