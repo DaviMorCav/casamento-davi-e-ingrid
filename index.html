@@ -81,7 +81,7 @@
         }
 
         .hero-bg {
-            background-image: linear-gradient(rgba(60, 30, 15, 0.4), rgba(60, 30, 15, 0.5)), url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-image: linear-gradient(rgba(60, 30, 15, 0.4), rgba(60, 30, 15, 0.5)), url('https://davimorcav.github.io/casamento-davi-e-ingrid/background/sentado-horizontal.jpeg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -200,7 +200,14 @@
                 </div>
 
                 <div class="md:w-1/3 flex justify-center relative">
-                    <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Nosso Amor" class="w-40 h-64 md:w-48 md:h-72 object-cover rounded-lg shadow-lg relative z-10">
+                    <div class="w-40 h-64 md:w-48 md:h-72 overflow-hidden rounded-lg shadow-lg relative z-10">
+                         <img 
+                            src="https://davimorcav.github.io/casamento-davi-e-ingrid/background/parque-junto.png"
+                             alt="Davi e Ingrid"
+                            class="w-full h-full object-cover scale-[1.75]"
+                            style="object-position: center 20%;"
+                         />
+                    </div>
                 </div>
 
                 <div class="md:w-1/3 text-center md:text-left">
@@ -221,33 +228,29 @@
 
     <!-- Details Section (Laranja) -->
     <section id="detalhes" class="min-h-screen flex items-center py-20 px-6 md:px-12 bg-cover bg-center bg-no-repeat relative overflow-hidden"
-  style="background-image: url('https://davimorcav.github.io/casamento-davi-e-ingrid/sentado-horizontal.jpeg');">
-        <div class="absolute inset-0 bg-black/40"></div>
-        <div class="max-w-6xl mx-auto w-full flex flex-col lg:flex-row items-center gap-12 lg:gap-20 fade-in-section relative z-10">
-            
-            <div class="w-full lg:w-1/2 flex justify-center lg:justify-end relative">
-                <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80" alt="Local do Casamento" class="w-full max-w-lg rounded-[2rem] object-cover h-[400px] lg:h-[600px] mix-blend-multiply opacity-80 sepia-[0.3] shadow-sm">
-            </div>
+  style="background-image: url('https://davimorcav.github.io/casamento-davi-e-ingrid/background/aquarela-10.png'); background-position: center 75%; ">
+        <div class="absolute inset-0 bg-white/30"></div>
+        <div class="max-w-6xl mx-auto w-full flex flex-col lg:flex-row justify-end items-center gap-12 lg:gap-20 fade-in-section relative z-10">
 
-            <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
+            <div class="w-full lg:w-1/2 ml-auto flex flex-col items-center lg:items-end text-center lg:text-left">
                 
                 <h2 class="font-newsreader text-4xl md:text-5xl lg:text-6xl text-[#5C4033] mb-4">
                     Detalhes da <span class="font-instrument italic text-themeOrange">Recepção</span>
                 </h2>
 
-                <p class="font-sans font-light text-sm md:text-base text-gray-600 mb-10 max-w-md leading-relaxed">
+                <p class="font-sans font-light text-sm md:text-base text-gray-600 mb-10 mr-8 max-w-md leading-relaxed text-center">
                     Sua presença é muito importante para nós. Será uma alegria compartilhar esse momento tão especial ao seu lado.
                 </p>
 
-                <div class="w-full max-w-md space-y-4">
+                <div class="w-full max-w-md space-y-4 mr-6">
                     <!-- Data -->
-                    <div class="bg-white rounded-[2rem] p-5 md:p-6 flex items-center gap-5 md:gap-6 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-gray-50 hover:transform hover:-translate-y-1 transition-transform duration-300">
+                    <div class="bg-white rounded-[2rem] p-5 md:p-6 flex items-start gap-5 md:gap-6 shadow-[0_8px_30px_rgba(0,0,0,0.04)] border border-gray-50 hover:transform hover:-translate-y-1 transition-transform duration-300">
                         <div class="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-themeOrange-light text-themeOrange flex items-center justify-center text-xl shrink-0">
                             <i class="far fa-calendar"></i>
                         </div>
-                        <div class="text-left">
-                            <p class="font-sans font-medium uppercase tracking-[0.15em] text-[9px] md:text-[10px] text-gray-400 mb-1">Data</p>
-                            <p class="font-sans text-gray-800 text-sm md:text-base mb-0.5">26 de Julho de 2026</p>
+                        <div class="text-left flex-col gap-1">
+                            <p class="font-sans font-medium uppercase tracking-[0.15em] text-[9px] md:text-[10px] text-gray-400">Data</p>
+                            <p class="font-sans text-gray-800 text-sm md:text-base">26 de Julho de 2026</p>
                             <p class="font-sans font-light text-xs text-gray-500">Domingo</p>
                         </div>
                     </div>
@@ -280,17 +283,12 @@
                         </div>
                     </a>
                 </div>
-
-                <!-- Link RSVP -->
-                <button onclick="document.getElementById('rsvp').scrollIntoView({behavior: 'smooth'})" class="mt-8 font-newsreader italic text-[15px] text-themeOrange hover:text-[#5C4033] transition-colors underline underline-offset-4 decoration-themeOrange/30 hover:decoration-[#5C4033]/50">
-                    Clique aqui para confirmar sua presença
-                </button>
             </div>
         </div>
     </section>
 
     <!-- Traje Section (Aquarela Original) -->
-    <section id="traje" class="min-h-screen flex flex-col justify-center py-20 px-0 bg-[#FCFAF8] relative overflow-hidden">
+    <section id="traje" class="min-h-screen flex flex-col justify-center py-20 px-0 bg-[#FDF5E6] relative overflow-hidden">
         <div class="max-w-7xl mx-auto w-full fade-in-section">
             
             <div class="flex justify-center gap-3 md:gap-4 mb-10">
@@ -306,14 +304,17 @@
 
             <div class="text-center mb-12 px-6">
                 <h2 class="font-newsreader text-4xl md:text-5xl lg:text-6xl text-[#5C4033] mb-4">Traje</h2>
-                <div class="flex items-center justify-center gap-2 mb-8">
-                    <div class="h-[1px] w-6 bg-themeYellow-dark/40"></div>
-                    <div class="w-1.5 h-1.5 rounded-full bg-themeYellow-dark/40 transform rotate-45"></div>
-                    <div class="h-[1px] w-6 bg-themeYellow-dark/40"></div>
-                </div>
-                <p class="font-sans font-light text-[11px] md:text-sm text-[#7A7A7A] max-w-xl mx-auto leading-relaxed">
-                    Para celebrar este momento especial, sugerimos o traje passeio<br class="hidden md:block">
-                    completo / social na paleta de cores do evento.
+                
+                <p class="font-sans font-light text-[11px] md:text-base text-[#7A7A7A] max-w-3xl mx-auto leading-8 tracking-[0.01em]">
+                    Nosso casamento será celebrado em um jardim, em uma tarde especial e cheia de alegria. Sugerimos traje passeio completo, com propostas leves e elegantes, valorizando tons alegres e sofisticados.
+    
+                    <br class="hidden md:block">
+
+                    Para maior conforto, lembramos que o espaço possui área gramada, então vale considerar o tipo de salto.
+    
+                    <br class="hidden md:block">
+
+                    E um carinho especial: pedimos gentilmente evitar tons de branco e off-white, reservados para a noiva nesse dia tão esperado.
                 </p>
             </div>
 
@@ -325,32 +326,85 @@
                     <i class="fas fa-chevron-right text-sm"></i>
                 </button>
 
-                <div id="traje-carousel" class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar gap-4 md:gap-6 py-4 px-2 md:px-4 items-center">
-                    <div class="snap-center shrink-0 w-[65vw] sm:w-[220px] lg:w-[250px] h-[400px] lg:h-[480px] bg-gradient-to-b from-white to-[#f2f2f2] rounded-[2rem] shadow-sm relative overflow-hidden border border-gray-100/50 flex justify-center items-end">
-                        <img src="https://images.unsplash.com/photo-1594938298596-70f581d82003?auto=format&fit=crop&w=400&q=80" alt="Traje Masculino Azul" class="w-full h-[95%] object-cover object-top mix-blend-darken opacity-90 sepia-[0.1]">
+                <div id="traje-carousel" class="flex overflow-x-auto overflxow-y-visible snap-x snap-mandatory hide-scrollbar gap-4 md:gap-6 py-4 px-2 md:px-4 pr-4 items-center">
+                    <div class="snap-center shrink-0 w-[65vw] sm:w-[220px] lg:w-[250px] h-[500px] lg:h-[550px] bg-white rounded-[2rem] shadow-sm relative overflow-hidden border border-gray-100/50 flex justify-center items-end">
+                        <img src="https://davimorcav.github.io/casamento-davi-e-ingrid/trajes/1.png"
+                        class="w-full h-full object-contain scale-105 translate-x-3">
                     </div>
-                    <div class="snap-center shrink-0 w-[65vw] sm:w-[220px] lg:w-[250px] h-[400px] lg:h-[480px] bg-gradient-to-b from-white to-[#f2f2f2] rounded-[2rem] shadow-sm relative overflow-hidden border border-gray-100/50 flex justify-center items-end">
-                        <img src="https://images.unsplash.com/photo-1566737236500-c8ac43014a67?auto=format&fit=crop&w=400&q=80" alt="Vestido Rosa" class="w-full h-[95%] object-cover object-top mix-blend-darken opacity-90 sepia-[0.1]">
+                    <div class="snap-center shrink-0 w-[65vw] sm:w-[220px] lg:w-[250px] h-[500px] lg:h-[550px] bg-white rounded-[2rem] shadow-sm relative overflow-hidden border border-gray-100/50 flex justify-center items-end">
+                        <img src="https://davimorcav.github.io/casamento-davi-e-ingrid/trajes/2.png"
+                        class="w-full h-full object-contain scale-95 -translate-x-2">
                     </div>
-                    <div class="snap-center shrink-0 w-[65vw] sm:w-[220px] lg:w-[250px] h-[400px] lg:h-[480px] bg-gradient-to-b from-white to-[#f2f2f2] rounded-[2rem] shadow-sm relative overflow-hidden border border-gray-100/50 flex justify-center items-end">
-                        <img src="https://images.unsplash.com/photo-1572804013309-8898b1827419?auto=format&fit=crop&w=400&q=80" alt="Vestido Laranja" class="w-full h-[95%] object-cover object-top mix-blend-darken opacity-90 sepia-[0.1]">
+                    <div class="snap-center shrink-0 w-[65vw] sm:w-[220px] lg:w-[250px] h-[500px] lg:h-[550px] bg-white rounded-[2rem] shadow-sm relative overflow-hidden border border-gray-100/50 flex justify-center items-end">
+                        <img src="https://davimorcav.github.io/casamento-davi-e-ingrid/trajes/8.png"
+                        class="w-full h-full object-contain scale-95">
                     </div>
-                    <div class="snap-center shrink-0 w-[65vw] sm:w-[220px] lg:w-[250px] h-[400px] lg:h-[480px] bg-gradient-to-b from-white to-[#f2f2f2] rounded-[2rem] shadow-sm relative overflow-hidden border border-gray-100/50 flex justify-center items-end">
-                        <img src="https://images.unsplash.com/photo-1593030103066-0093718efeb9?auto=format&fit=crop&w=400&q=80" alt="Traje Masculino Bordô" class="w-full h-[95%] object-cover object-top mix-blend-darken opacity-90 sepia-[0.1]">
+                    <div class="snap-center shrink-0 w-[65vw] sm:w-[220px] lg:w-[250px] h-[500px] lg:h-[550px] bg-white rounded-[2rem] shadow-sm relative overflow-hidden border border-gray-100/50 flex justify-center items-end">
+                        <img src="https://davimorcav.github.io/casamento-davi-e-ingrid/trajes/7.png"
+                        class="w-full h-full object-contain scale-95 -translate-x-1">
                     </div>
-                    <div class="snap-center shrink-0 w-[65vw] sm:w-[220px] lg:w-[250px] h-[400px] lg:h-[480px] bg-gradient-to-b from-white to-[#f2f2f2] rounded-[2rem] shadow-sm relative overflow-hidden border border-gray-100/50 flex justify-center items-end">
-                        <img src="https://images.unsplash.com/photo-1568252542512-9fe8cf4c8fce?auto=format&fit=crop&w=400&q=80" alt="Vestido Amarelo" class="w-full h-[95%] object-cover object-top mix-blend-darken opacity-90 sepia-[0.1]">
+                    <div class="snap-center shrink-0 w-[65vw] sm:w-[220px] lg:w-[250px] h-[500px] lg:h-[550px] bg-white rounded-[2rem] shadow-sm relative overflow-hidden border border-gray-100/50 flex justify-center items-end">
+                        <img src="https://davimorcav.github.io/casamento-davi-e-ingrid/trajes/11.jpeg"
+                        class="w-full h-full object-contain scale-100 translate-y-4">
                     </div>
-                    <div class="snap-center shrink-0 w-[65vw] sm:w-[220px] lg:w-[250px] h-[400px] lg:h-[480px] bg-gradient-to-b from-white to-[#f2f2f2] rounded-[2rem] shadow-sm relative overflow-hidden border border-gray-100/50 flex justify-center items-end">
-                        <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=400&q=80" alt="Vestido Magenta" class="w-full h-[95%] object-cover object-top mix-blend-darken opacity-90 sepia-[0.1]">
+                    <div class="snap-center shrink-0 w-[65vw] sm:w-[220px] lg:w-[250px] h-[500px] lg:h-[550px] bg-white rounded-[2rem] shadow-sm relative overflow-hidden border border-gray-100/50 flex justify-center items-end">
+                        <img src="https://davimorcav.github.io/casamento-davi-e-ingrid/trajes/10.png"
+                        class="w-full h-full object-contain scale-95 -translate-x-3">
+                    </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Confirmação de Presença Section (Laranja) -->
+    <section id="rsvp" class="min-h-screen flex items-center justify-center py-20 px-6 md:px-12 relative overflow-hidden bg-center bg-cover bg-no-repeat" style="background-image: url('https://davimorcav.github.io/casamento-davi-e-ingrid/background/aliancas.jpeg');">
+        <div class="absolute inset-0 bg-black/60"></div>
+        
+        <div class="relative z-10 w-full max-w-4xl mx-auto flex flex-col items-center text-center fade-in-section">
+            
+            <h2 class="font-newsreader text-4xl md:text-5xl lg:text-6xl text-white mb-4">
+                Confirme sua <span class="font-instrument italic text-themeOrange">Presença</span>
+            </h2>
+
+            <p class="font-sans font-light text-xs md:text-sm text-white/80 max-w-lg mx-auto leading-relaxed mb-10">
+                Preencha o formulário abaixo para confirmar que estará conosco neste dia tão especial.
+            </p>
+
+            <div class="bg-white p-8 md:p-10 rounded-[2rem] shadow-2xl w-full max-w-lg relative overflow-hidden">
+                <form id="rsvp-form" class="space-y-5 text-left" onsubmit="submitRsvp(event)">
+                    <div>
+                        <label for="name" class="block text-[10px] font-medium text-gray-500 uppercase tracking-widest mb-1.5 ml-1">Nome Completo</label>
+                        <input type="text" id="name" placeholder="Seu nome" required class="w-full px-5 py-3.5 rounded-xl border border-gray-100 bg-[#FCFAF8] focus:ring-2 focus:ring-themeOrange focus:border-themeOrange outline-none transition-colors text-sm text-gray-700 placeholder-gray-400">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-[10px] font-medium text-gray-500 uppercase tracking-widest mb-1.5 ml-1">E-mail</label>
+                        <input type="email" id="email" placeholder="seu@email.com" required class="w-full px-5 py-3.5 rounded-xl border border-gray-100 bg-[#FCFAF8] focus:ring-2 focus:ring-themeOrange focus:border-themeOrange outline-none transition-colors text-sm text-gray-700 placeholder-gray-400">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-[10px] font-medium text-gray-500 uppercase tracking-widest mb-1.5 ml-1">Telefone</label>
+                        <input type="tel" id="phone" placeholder="(85) 91234-5678" required class="w-full px-5 py-3.5 rounded-xl border border-gray-100 bg-[#FCFAF8] focus:ring-2 focus:ring-themeOrange focus:border-themeOrange outline-none transition-colors text-sm text-gray-700 placeholder-gray-400">
+                    </div>
+                    <button type="submit" class="w-full py-4 mt-4 bg-themeOrange hover:bg-themeOrange-dark text-white rounded-full uppercase tracking-[0.15em] text-[11px] font-medium transition-colors shadow-md">
+                        Confirmar Presença
+                    </button>
+                </form>
+                
+                <div id="rsvp-success" class="hidden absolute inset-0 bg-white flex-col items-center justify-center p-8 text-center z-10">
+                    <div class="w-16 h-16 bg-themeOrange-light rounded-full flex items-center justify-center text-themeOrange text-2xl mb-4">
+                        <i class="fas fa-check"></i>
+                    </div>
+                    <h3 class="font-newsreader text-2xl text-gray-800 mb-2">Presença Confirmada!</h3>
+                    <p class="font-sans font-light text-sm text-gray-500">Agradecemos por confirmar. Nos vemos lá!</p>
+                    <button onclick="resetForm()" class="mt-6 text-xs uppercase tracking-widest text-themeOrange font-medium hover:text-[#5C4033] transition-colors underline underline-offset-4 decoration-transparent hover:decoration-[#5C4033]/30">Enviar nova resposta</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
     <!-- Programação Section (Rosa) -->
-    <section id="programacao" class="min-h-[70vh] flex flex-col items-center justify-center py-20 px-0 bg-[#FCFAF8] relative text-center overflow-hidden">
+    <section id="programacao" class="min-h-[70vh] flex flex-col items-center justify-center py-20 px-0 bg-[#FDF5E6] relative text-center overflow-hidden">
         <div class="max-w-7xl mx-auto fade-in-section w-full flex flex-col items-center">
             
             <h2 class="font-newsreader text-4xl md:text-5xl lg:text-6xl text-[#5C4033] mb-12 md:mb-16">
@@ -389,8 +443,8 @@
                                 <use href="#recepcao-art" stroke-width="0.3" opacity="0.4" transform="translate(-0.5, -0.2) rotate(-1 16 16)"/>
                             </svg>
                         </div>
-                        <div class="font-kapakana text-2xl md:text-3xl lg:text-4xl text-themePink leading-none mb-0 bg-[#FCFAF8] px-3">15:00</div>
-                        <h3 class="font-instrument text-xl md:text-2xl lg:text-3xl text-[#5C4033] leading-tight uppercase tracking-wider -mt-1 bg-[#FCFAF8] px-3">RECEPÇÃO</h3>
+                        <div class="font-kapakana text-2xl md:text-3xl lg:text-4xl text-themePink leading-none mb-0 px-3">15:00</div>
+                        <h3 class="font-instrument text-xl md:text-2xl lg:text-3xl text-[#5C4033] leading-tight uppercase tracking-wider -mt-1 px-3">RECEPÇÃO</h3>
                     </div>
 
                     <div class="w-[1px] h-32 bg-themePink/20 shrink-0 self-center hidden sm:block"></div>
@@ -419,8 +473,8 @@
                                 <use href="#cerimonia-art" stroke-width="0.3" opacity="0.4" transform="translate(-0.5, -0.2) rotate(-1 16 16)"/>
                             </svg>
                         </div>
-                        <div class="font-kapakana text-2xl md:text-xl lg:text-4xl text-themePink leading-none mb-0 bg-[#FCFAF8] px-3">16:00</div>
-                        <h3 class="font-instrument text-xl md:text-2xl lg:text-3xl text-[#5C4033] leading-tight uppercase tracking-wider -mt-1 bg-[#FCFAF8] px-3">CERIMÔNIA</h3>
+                        <div class="font-kapakana text-2xl md:text-xl lg:text-4xl text-themePink leading-none mb-0 px-3">16:00</div>
+                        <h3 class="font-instrument text-xl md:text-2xl lg:text-3xl text-[#5C4033] leading-tight uppercase tracking-wider -mt-1 px-3">CERIMÔNIA</h3>
                     </div>
 
                     <div class="w-[1px] h-32 bg-themePink/20 shrink-0 self-center hidden sm:block"></div>
@@ -449,8 +503,8 @@
                                 <use href="#fotos-art" stroke-width="0.3" opacity="0.4" transform="translate(-0.5, -0.2) rotate(-1 16 16)"/>
                             </svg>
                         </div>
-                        <div class="font-kapakana text-2xl md:text-3xl lg:text-4xl text-themePink leading-none mb-0 bg-[#FCFAF8] px-3">17:00</div>
-                        <h3 class="font-instrument text-xl md:text-2xl lg:text-3xl text-[#5C4033] leading-tight uppercase tracking-wider -mt-1 bg-[#FCFAF8] px-3">FOTOS</h3>
+                        <div class="font-kapakana text-2xl md:text-3xl lg:text-4xl text-themePink leading-none mb-0 px-3">17:00</div>
+                        <h3 class="font-instrument text-xl md:text-2xl lg:text-3xl text-[#5C4033] leading-tight uppercase tracking-wider -mt-1 px-3">FOTOS</h3>
                     </div>
 
                     <div class="w-[1px] h-32 bg-themePink/20 shrink-0 self-center hidden sm:block"></div>
@@ -479,8 +533,8 @@
                                 <use href="#bingo-art" stroke-width="0.3" opacity="0.4" transform="translate(-0.5, -0.2) rotate(-1 16 16)"/>
                             </svg>
                         </div>
-                        <div class="font-kapakana text-2xl md:text-3xl lg:text-4xl text-themePink leading-none mb-0 bg-[#FCFAF8] px-3">18:00</div>
-                        <h3 class="font-instrument text-xl md:text-2xl lg:text-3xl text-[#5C4033] leading-tight uppercase tracking-wider -mt-1 bg-[#FCFAF8] px-3">BINGO</h3>
+                        <div class="font-kapakana text-2xl md:text-3xl lg:text-4xl text-themePink leading-none mb-0 px-3">18:00</div>
+                        <h3 class="font-instrument text-xl md:text-2xl lg:text-3xl text-[#5C4033] leading-tight uppercase tracking-wider -mt-1 px-3">BINGO</h3>
                     </div>
 
                     <div class="w-[1px] h-32 bg-themePink/20 shrink-0 self-center hidden sm:block"></div>
@@ -512,80 +566,42 @@
                                 <use href="#festa-art" stroke-width="0.3" opacity="0.4" transform="translate(-0.5, -0.2) rotate(-1 16 16)"/>
                             </svg>
                         </div>
-                        <div class="font-kapakana text-2xl md:text-3xl lg:text-4xl text-themePink leading-none mb-0 bg-[#FCFAF8] px-3">19:00</div>
-                        <h3 class="font-instrument text-xl md:text-2xl lg:text-3xl text-[#5C4033] leading-tight uppercase tracking-wider -mt-1 bg-[#FCFAF8] px-3">FESTA</h3>
+                        <div class="font-kapakana text-2xl md:text-3xl lg:text-4xl text-themePink leading-none mb-0 px-3">19:00</div>
+                        <h3 class="font-instrument text-xl md:text-2xl lg:text-3xl text-[#5C4033] leading-tight uppercase tracking-wider -mt-1 px-3">FESTA</h3>
                     </div>
 
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Confirmação de Presença Section (Laranja) -->
-    <section id="rsvp" class="min-h-screen flex items-center justify-center py-20 px-6 md:px-12 relative overflow-hidden bg-center bg-cover bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1920&q=80');">
-        <div class="absolute inset-0 bg-black/60"></div>
-        
-        <div class="relative z-10 w-full max-w-4xl mx-auto flex flex-col items-center text-center fade-in-section">
-            
-            <h2 class="font-newsreader text-4xl md:text-5xl lg:text-6xl text-white mb-4">
-                Confirme sua <span class="font-instrument italic text-themeOrange">Presença</span>
-            </h2>
-
-            <p class="font-sans font-light text-xs md:text-sm text-white/80 max-w-lg mx-auto leading-relaxed mb-10">
-                Preencha o formulário abaixo para confirmar que estará conosco neste dia tão especial.
-            </p>
-
-            <div class="bg-white p-8 md:p-10 rounded-[2rem] shadow-2xl w-full max-w-lg relative overflow-hidden">
-                <form id="rsvp-form" class="space-y-5 text-left" onsubmit="submitRsvp(event)">
-                    <div>
-                        <label for="name" class="block text-[10px] font-medium text-gray-500 uppercase tracking-widest mb-1.5 ml-1">Nome Completo</label>
-                        <input type="text" id="name" placeholder="Seu nome" required class="w-full px-5 py-3.5 rounded-xl border border-gray-100 bg-[#FCFAF8] focus:ring-2 focus:ring-themeOrange focus:border-themeOrange outline-none transition-colors text-sm text-gray-700 placeholder-gray-400">
-                    </div>
-                    <div>
-                        <label for="email" class="block text-[10px] font-medium text-gray-500 uppercase tracking-widest mb-1.5 ml-1">E-mail</label>
-                        <input type="email" id="email" placeholder="seu@email.com" required class="w-full px-5 py-3.5 rounded-xl border border-gray-100 bg-[#FCFAF8] focus:ring-2 focus:ring-themeOrange focus:border-themeOrange outline-none transition-colors text-sm text-gray-700 placeholder-gray-400">
-                    </div>
-                    <div>
-                        <label for="phone" class="block text-[10px] font-medium text-gray-500 uppercase tracking-widest mb-1.5 ml-1">Telefone</label>
-                        <input type="tel" id="phone" placeholder="(11) 99999-9999" required class="w-full px-5 py-3.5 rounded-xl border border-gray-100 bg-[#FCFAF8] focus:ring-2 focus:ring-themeOrange focus:border-themeOrange outline-none transition-colors text-sm text-gray-700 placeholder-gray-400">
-                    </div>
-                    <button type="submit" class="w-full py-4 mt-4 bg-themeOrange hover:bg-themeOrange-dark text-white rounded-full uppercase tracking-[0.15em] text-[11px] font-medium transition-colors shadow-md">
-                        Confirmar Presença
-                    </button>
-                </form>
-                
-                <div id="rsvp-success" class="hidden absolute inset-0 bg-white flex-col items-center justify-center p-8 text-center z-10">
-                    <div class="w-16 h-16 bg-themeOrange-light rounded-full flex items-center justify-center text-themeOrange text-2xl mb-4">
-                        <i class="fas fa-check"></i>
-                    </div>
-                    <h3 class="font-newsreader text-2xl text-gray-800 mb-2">Presença Confirmada!</h3>
-                    <p class="font-sans font-light text-sm text-gray-500">Agradecemos por confirmar. Nos vemos lá!</p>
-                    <button onclick="resetForm()" class="mt-6 text-xs uppercase tracking-widest text-themeOrange font-medium hover:text-[#5C4033] transition-colors underline underline-offset-4 decoration-transparent hover:decoration-[#5C4033]/30">Enviar nova resposta</button>
-                </div>
-            </div>
-
         </div>
     </section>
 
     <!-- Presentes Section (Rosa) -->
-    <section id="presentes" class="min-h-[70vh] flex flex-col items-center justify-center py-20 px-6 md:px-12 bg-[#FCFAF8] relative">
-        <div class="max-w-4xl mx-auto flex flex-col items-center text-center fade-in-section w-full">
-            
-            <h2 class="font-newsreader text-4xl md:text-5xl lg:text-6xl text-[#5C4033] mb-6">
-                Sugestões de <span class="font-instrument italic text-themePink">Presentes</span>
-            </h2>
+    <section id="presentes" class="min-h-[70vh] w-full flex items-center justify-center relative">
+    
+    <div 
+        class="w-full min-h-[70vh] flex flex-col items-center justify-center py-20 px-6 md:px-12 relative bg-cover bg-[center_38%] bg-no-repeat" 
+        style="background-image: url('https://davimorcav.github.io/casamento-davi-e-ingrid/background/parque-juntos3.PNG');"
+    >
 
-            <p class="font-sans font-light text-xs md:text-sm text-[#7A7A7A] max-w-xl mx-auto leading-relaxed mb-10">
-                Se deseja nos presentear, acesse nossa lista e escolha um item.<br class="hidden md:block">
-                Cada gesto de carinho tornará esse dia ainda mais especial.
-            </p>
+        <!-- Overlay escuro -->
+        <div class="absolute inset-0 bg-black/35"></div>
 
-            <button onclick="openGiftsPage()" class="bg-themePink hover:bg-themePink-dark text-white px-8 py-4 rounded-full font-sans font-light text-xs md:text-sm flex items-center gap-3 transition-colors shadow-md group">
-                <i class="fas fa-gift"></i>
-                Ver Lista de Presentes
-                <i class="fas fa-chevron-right text-[10px] ml-1 group-hover:translate-x-1 transition-transform"></i>
-            </button>
-        </div>
+        <h2 class="relative z-10 font-newsreader text-4xl md:text-5xl lg:text-6xl text-white mb-6">
+        Sugestões de <span class="font-instrument italic text-themePink">Presentes</span>
+        </h2>
+
+        <p class="relative z-10 font-sans font-light text-xs md:text-sm text-white max-w-xl mx-auto leading-relaxed mb-10">
+        Se deseja nos presentear, acesse nossa lista e escolha um item.<br class="hidden md:block">
+        Cada gesto de carinho tornará esse dia ainda mais especial.
+        </p>
+
+        <button onclick="openGiftsPage()" class="relative z-10 bg-themePink hover:bg-themePink-dark text-white px-8 py-4 rounded-full font-sans font-light text-xs md:text-sm flex items-center gap-3 transition-colors shadow-md group">
+        <i class="fas fa-gift"></i>
+        Ver Lista de Presentes
+        <i class="fas fa-chevron-right text-[10px] ml-1 group-hover:translate-x-1 transition-transform"></i>
+        </button>
+
+    </div>
     </section>
 
     <!-- Countdown Section (Fundo Claro Areia) -->
@@ -638,13 +654,13 @@
 
             <div class="mb-4 w-full">
                 <p class="text-xs uppercase tracking-widest text-gray-500 mb-3 font-semibold">Escaneie o QR Code</p>
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=00020126360014br.gov.bcb.pix0114+55859999999995204000053039865802BR5915DAVI E INGRID6009FORTALEZA62070503***6304" alt="QR Code PIX" class="w-32 h-32 md:w-36 md:h-36 mx-auto border-2 border-gray-100 p-2 rounded-xl">
+                <img src="https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/qr.jpeg" " alt="QR Code PIX" class="w-48 h-48 md:w-56 md:h-56 mx-auto border-2 border-gray-100 p-2 rounded-xl">
             </div>
             
             <div class="w-full mt-2">
                 <p class="text-xs uppercase tracking-widest text-gray-500 mb-2 font-semibold">Chave Aleatória</p>
                 <div class="flex items-center justify-between bg-gray-50 p-2.5 rounded-xl border border-dashed border-gray-300">
-                    <span id="pix-key" class="font-mono text-[10px] md:text-xs text-gray-500 truncate select-all mr-2 text-left w-full">32e5d9c0-1b2a-4f5c-8d9e-0a1b2c3d4e5f</span>
+                    <span id="pix-key" class="font-mono text-[10px] md:text-xs text-gray-500 truncate select-all mr-2 text-left w-full">532c6960-c432-46f9-a9b2-fa444e88b788</span>
                     <button onclick="copyPixKey()" class="bg-themePink hover:bg-themePink-dark text-white py-1.5 px-3 rounded-lg transition-colors flex-shrink-0 text-xs font-medium flex items-center gap-1.5" title="Copiar chave PIX">
                         <i class="far fa-copy"></i> Copiar
                     </button>
@@ -740,28 +756,46 @@
         }, { threshold: 0.15 });
         document.querySelectorAll('.fade-in-section').forEach((section) => observer.observe(section));
 
-        function submitRsvp(e) { 
-            e.preventDefault(); 
-            const btn = e.target.querySelector('button[type="submit"]'); 
-            btn.innerHTML = 'Enviando...'; 
-            btn.disabled = true; 
-            
-            setTimeout(() => { 
-                document.getElementById('rsvp-success').classList.remove('hidden'); 
-                document.getElementById('rsvp-success').classList.add('flex'); 
-                btn.innerHTML = 'Confirmar Presença'; 
-                btn.disabled = false;
-            }, 1500); 
-        }
-        
-        function resetForm() { 
-            document.getElementById('rsvp-form').reset(); 
-            document.getElementById('rsvp-success').classList.add('hidden'); 
-            document.getElementById('rsvp-success').classList.remove('flex'); 
-        }
+const scriptURL = "https://script.google.com/macros/s/AKfycby6RULQr1MbDKxvqlTH3d-diFsMaFe4wTtoUWBGXeWHI1-dQU__sr4NsyKiYk5QkMDX7w/exec";
 
-        const giftsPage = document.getElementById('gifts-page');
-        const giftsGrid = document.getElementById('gifts-grid');
+async function submitRsvp(e) {
+    e.preventDefault();
+
+    const btn = e.target.querySelector('button[type="submit"]');
+    btn.innerHTML = "Enviando...";
+    btn.disabled = true;
+
+    const formData = new FormData();
+    formData.append("name", document.getElementById("name").value);
+    formData.append("email", document.getElementById("email").value);
+    formData.append("phone", document.getElementById("phone").value);
+
+    try {
+        await fetch(scriptURL, {
+            method: "POST",
+            body: formData
+        });
+
+        document.getElementById('rsvp-success').classList.remove('hidden');
+        document.getElementById('rsvp-success').classList.add('flex');
+
+    } catch (error) {
+        alert("Erro de conexão. Tente novamente.");
+        console.error(error);
+    }
+
+    btn.innerHTML = "Confirmar Presença";
+    btn.disabled = false;
+}
+
+function resetForm() { 
+    document.getElementById('rsvp-form').reset(); 
+    document.getElementById('rsvp-success').classList.add('hidden'); 
+    document.getElementById('rsvp-success').classList.remove('flex'); 
+}
+
+const giftsPage = document.getElementById('gifts-page');
+const giftsGrid = document.getElementById('gifts-grid');
 
         function openGiftsPage() {
             giftsPage.classList.remove('hidden');
@@ -784,15 +818,39 @@
             if (giftsGrid.children.length > 0) return; 
 
             const baseGifts = [
-                { name: "Edredom", price: "160,00", img: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=400&q=80" },
-                { name: "Mesa de centro", price: "170,00", img: "https://images.unsplash.com/photo-1532372320572-cda25653a26d?auto=format&fit=crop&w=400&q=80" },
-                { name: "Jogo de jantar com 20 peças", price: "250,00", img: "https://images.unsplash.com/photo-1610260408466-26756855ceea?auto=format&fit=crop&w=400&q=80" },
-                { name: "Aparelho de fondue", price: "260,00", img: "https://images.unsplash.com/photo-1546241072-48010ad2862c?auto=format&fit=crop&w=400&q=80" },
-                { name: "Prateleira", price: "300,00", img: "https://images.unsplash.com/photo-1532323544230-7191fd51bc1b?auto=format&fit=crop&w=400&q=80" },
-                { name: "Tapete", price: "300,00", img: "https://images.unsplash.com/photo-1562582664-8a8803c13105?auto=format&fit=crop&w=400&q=80" },
-                { name: "Jogo de mesa posta", price: "300,00", img: "https://images.unsplash.com/photo-1576186985161-0428bc6baec8?auto=format&fit=crop&w=400&q=80" },
-                { name: "Passeio de buggy com emoção", price: "300,00", img: "https://images.unsplash.com/photo-1526404450956-2db4758b2fc1?auto=format&fit=crop&w=400&q=80" }
-            ];
+  { name: "Jogo de jantar com 20 peças", price: "250,00", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/jogo-de-jantar.png" },
+  { name: "Aparelho de fondue", price: "260,00", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/aparelho-de-fondue.png" },
+  { name: "Prateleira", price: "300,00", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/prateleira.png" },
+  { name: "Tapete", price: "300,00", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/tapete.png" },
+  { name: "Jogo de mesa posta", price: "300,00", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/jogo-de-mesa-posta.png" },
+  { name: "Passeio de buggy com emoção", price: "300,00", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/passeio-de-buggy-com-emocao.png" },
+  { name: "Panela de pressão elétrica 4L", price: "350,00", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/panela-de-pressao-eletrica-4l.png" },
+  { name: "Microondas", price: "450,00", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/microondas.png" },
+  { name: "Batedeira Planetária e Bowl de Plástico", price: "509,00", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/batedeira-planetaria-e-bowl-de-plastico.png" },
+  { name: "Jogo de Toalhas de Algodão Egípcio", price: "519,00", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/jogo-de-toalhas-de-algodao-egipcio.png" },
+  { name: "Jogo de Cama Casal com 04 Peças", price: "529,00", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/jogo-de-cama-casal-com-04-pecas.png" },
+  { name: "Jogo de Facas com 14 Peças em Inox", price: "529,00", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/jogo-de-facas-com-14-pecas-em-inox.png" },
+  { name: "Cafeteira Vertuo", price: "529,90", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/cafeteira-vertuo.png" },
+  { name: "Faqueiro com 30 peças", price: "550,00", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/faqueiro-com-30-pecas.png" },
+  { name: "Cobertor King Size", price: "599,00", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/cobertor-king-size.png" },
+  { name: "Fogão", price: "600,00", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/fogao.png" },
+  { name: "Diária para noite de núpcias", price: "600,00", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/diaria-para-noite-de-nupcias.png" },
+  { name: "Ajuda na hospedagem", price: "600,00", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/hospedagem.jpeg" },
+  { name: "Empréstimo para pagar a festa", price: "600,00", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/emprestimo-parcelado-para-pagar-a-festa.png" },
+  { name: "Jogo de Panelas Cerâmica", price: "650,00", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/panelas.jpeg" },
+  { name: "Micro-ondas de Mesa Panasonic com 34 Litros", price: "699,00", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/microondas2.jpeg" },
+  { name: "Purificador de água", price: "730,00", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/purificador-de-agua.png" },
+  { name: "Coifa", price: "800,00", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/coifa.png" },
+  { name: "Conjunto de Panelas em Alumínio com 05 Peças", price: "809,00", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/panelas2.png" },
+  { name: "Doces do casamento", price: "900,00", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/doces-do-casamento.png" },
+  { name: "Impressora Multifuncional Epson Ecotank Jato de Tinta com USB e Wi-Fi", price: "964,00", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/impressora.png" },
+  { name: "Soundbar Samsung com Subwoofer sem Fio", price: "999,00", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/soundbar.jpeg" },
+  { name: "Robô aspirador", price: "1.000,00", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/robo.png" },
+  { name: "Ar condicionado", price: "1.300,00", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/ar-condicionado.png" },
+  { name: "Máquina de lavar roupa", price: "1.800,00", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/maquina-de-lavar-roupa.png" },
+  { name: "Geladeira", price: "1.900,00", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/geladeira.png" },
+  { name: "Televisão 50 polegadas", price: "1.990,00", img: "https://davimorcav.github.io/casamento-davi-e-ingrid/presentes/televisao-50-polegadas.png" }
+];
 
             let html = '';
             
@@ -857,10 +915,6 @@
             msg.classList.remove('opacity-0');
             
             setTimeout(() => msg.classList.add('opacity-0'), 2500);
-        }
-
-        function openGiftsPage_placeholder() {
-            // placeholder - substituir pela função de presentes real
         }
     </script>
 </body>
